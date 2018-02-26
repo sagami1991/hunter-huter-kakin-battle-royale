@@ -1,0 +1,111 @@
+{
+    "1" : {
+        "bossPersonId": "1",
+        "name": "第1王子私設兵",
+        "note": "下位王子の警護は王妃専属兵しかできないが、私設兵の中でも第1王子ベンジャミンの部下だけは警護資格がある。"
+    },
+    "2" : {
+        "bossPersonId": "2",
+        "name": "第2王子私設兵"
+    },
+    "3" : {
+        "bossPersonId": "3",
+        "name": "第3王子私設兵"
+    },
+    "4" : {
+        "bossPersonId": "4",
+        "name": "第4王子私設兵"
+    },
+    "5" : {
+        "bossPersonId": "5",
+        "name": "第5王子私設兵"
+    },
+    "6" : {
+        "bossPersonId": "6",
+        "name": "第6王子私設兵"
+    },
+    "7" : {
+        "bossPersonId": "7",
+        "name": "第7王子私設兵"
+    },
+    "8" : {
+        "bossPersonId": "8",
+        "name": "第8王子私設兵"
+    },
+    "9" : {
+        "bossPersonId": "9",
+        "name": "第9王子私設兵"
+    },
+    "10" : {
+        "bossPersonId": "10",
+        "name": "第10王子私設兵"
+    },
+    "11" : {
+        "bossPersonId": "11",
+        "name": "第11王子私設兵"
+    },
+    "12" : {
+        "bossPersonId": "12",
+        "name": "第12王子私設兵"
+    },
+    "13" : {
+        "bossPersonId": "13",
+        "name": "第13王子私設兵"
+    },
+    "14" : {
+        "bossPersonId": "1",
+        "name": "第14王子私設兵"
+    },
+    "15" : {
+        "bossPersonId": "15",
+        "name": "第1王妃所属兵"
+    },
+    "16" : {
+        "bossPersonId": "16",
+        "name": "第2王妃所属兵"
+    },
+    "17" : {
+        "bossPersonId": "17",
+        "name": "第3王妃所属兵"
+    },
+    "18" : {
+        "bossPersonId": "18",
+        "name": "第4王妃所属兵"
+    },
+    "19" : {
+        "bossPersonId": "19",
+        "name": "第5王妃所属兵"
+    },
+    "20" : {
+        "bossPersonId": "20",
+        "name": "第6王妃所属兵"
+    },
+    "21" : {
+        "bossPersonId": "21",
+        "name": "第7王妃所属兵"
+    },
+    "22" : {
+        "bossPersonId": "22",
+        "name": "第8王妃所属兵"
+    },
+    "23" : {
+        "bossPersonId": "",
+        "name": "第8王子私設兵"
+    },
+    "25" : {
+        "bossPersonId": "",
+        "name": "協専ハンター",
+        "note": "パリストン経由でビヨンドに雇われている。主目的は暗黒大陸任務"
+    },
+    "24" : {
+        "bossPersonId": "",
+        "name": "ハンター（クラピカ経由）",
+        "note": "第4王子ツェリードニヒから緋の目を奪うためにクラピカから雇われた。主任務はクラピカが第4王子に接触するのを支援すること。"
+    },
+    "26" : {
+        "bossPersonId": "",
+        "name": "ハンター",
+        "note": ""
+    }
+
+}

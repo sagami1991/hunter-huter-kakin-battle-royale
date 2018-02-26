@@ -1,0 +1,272 @@
+{
+    "23": {
+        "name": "ブッチ",
+        "belong": "第1王子私設兵",
+        "belongId": "1",
+        "thumbnailImage": "ブッチ_thumbnail.jpg",
+        "observerPrinceId": "5",
+        "useNen": true,
+        "isObserver": true
+    },
+    "24": {
+        "name": "ビンセント",
+        "belong": "第1王子私設兵",
+        "belongId": "1",
+        "thumbnailImage": "ビンセント_thumbnail.png",
+        "note": "クラピカに返り討ちに遭い死亡。能力はベンジャミンに継承された",
+        "observerPrinceId": "14",
+        "useNen": true,
+        "nenDetail": "エアブロウ",
+        "isDead": true,
+        "isObserver": true
+    },
+    "25": {
+        "name": "オラーウ",
+        "belong": "第1王子私設兵",
+        "belongId": "1",
+        "thumbnailImage": "オラーウ_thumbnail.jpg",
+        "observerPrinceId": "6",
+        "useNen": true,
+        "isObserver": true
+    },
+    "26": {
+        "name": "チャラ男（仮）",
+        "belong": "ハンター",
+        "belongId": "26",
+        "thumbnailImage": "チャラ_thumbnail.jpg",
+        "note": "イズナビのことをイズさんと呼ぶ",
+        "observerPrinceId": "6",
+        "useNen": true
+    },
+    "27": {
+        "name": "イズナビ",
+        "belongId": "26",
+        "thumbnailImage": "イズナビ.png",
+        "note": "クラピカ経由での任務。クラピカの師匠",
+        "observerPrinceId": "6",
+        "useNen": true
+    },
+    "28": {
+        "name": "バショウ",
+        "belongId": "26",
+        "note": "クラピカ経由での任務。クラピカとはノストラード組繋がり",
+        "thumbnailImage": "バショウ.png",
+        "observerPrinceId": "7",
+        "useNen": true
+    },
+    "29": {
+        "name": "センリツ",
+        "belongId": "26",
+        "note": "クラピカ経由での任務。クラピカとはノストラード組繋がり",
+        "thumbnailImage": "センリツ.png",
+        "observerPrinceId": "10",
+        "useNen": true
+    },
+    "30": {
+        "name": "ビスケ",
+        "belongId": "26",
+        "note": "クラピカ経由での任務。クラピカとはキルア紹介での繋がり",
+        "thumbnailImage": "ビスケ.png",
+        "observerPrinceId": "13",
+        "useNen": true
+    },
+    "31": {
+        "name": "ハンゾー",
+        "belongId": "26",
+        "note": "クラピカ経由での任務。クラピカとは同期繋がり。第12王子が死亡したので、第13王子の警護に移動。",
+        "thumbnailImage": "ハンゾー.png",
+        "observerPrinceId": "12",
+        "useNen": true
+    },
+    "32": {
+        "name": "ウッディー",
+        "belong": "不明",
+        "note": "サイレントマジョリティにより死亡。最初の犠牲者。死亡時刻12時15分-12時30分",
+        "thumbnailImage": "ウッディー_thumbnail.png",
+        "observerPrinceId": "14",
+        "isDead": true
+    },
+    "33": {
+        "name": "ビル",
+        "belongId": "26",
+        "note": "",
+        "thumbnailImage": "ビル.jpg",
+        "observerPrinceId": "14",
+        "useNen": true
+    },
+    "34": {
+        "name": "サイールド",
+        "belongId": "26",
+        "note": "第12王子の霊獣に操られ、3人を殺害。退去済み",
+        "thumbnailImage": "サイールド_thumbnail.jpg",
+        "observerPrinceId": "14",
+        "useNen": true,
+        "detailNen": "小さな虫を操る"
+    },
+    "35": {
+        "name": "カートン",
+        "belongId": "26",
+        "note": "死亡済",
+        "thumbnailImage": "カートン_thumbnail.jpg",
+        "observerPrinceId": "14",
+        "useNen": true,
+        "isDead": true,
+        "detailNen": "船か車に変身可能"
+    },
+    "36": {
+        "name": "マイト",
+        "belongId": "1",
+        "note": "兵隊長",
+        "thumbnailImage": "マイト.jpg",
+        "observerPrinceId": "1",
+        "useNen": true,
+        "detailNen": ""
+    },
+    "37": {
+        "name": "バビマイナ",
+        "belong": "第1王子私設兵",
+        "belongId": "1",
+        "note": "",
+        "thumbnailImage": "バビマイナ_thumbnail.jpg",
+        "observerPrinceId": "14",
+        "useNen": true,
+        "detailNen": "カウンター型",
+        "isObserver": true
+    },
+    "38": {
+        "name": "コベントバ",
+        "belong": "第1王子私設兵",
+        "belongId": "1",
+        "note": "",
+        "thumbnailImage": "コベントバ_thumbnail.jpg",
+        "observerPrinceId": "3",
+        "useNen": true,
+        "detailNen": "",
+        "isObserver": true
+    },
+    "39": {
+        "name": "スラッカ",
+        "belong": "第2王妃所属兵",
+        "belongId": "16",
+        "note": "",
+        "thumbnailImage": "スラッカ_thumbnail.jpg",
+        "observerPrinceId": "3",
+        "useNen": null,
+        "detailNen": ""
+    },
+    "40": {
+        "name": "ビクト",
+        "belongId": "1",
+        "note": "",
+        "thumbnailImage": "ビクト_thumbnail.jpg",
+        "observerPrinceId": "12",
+        "useNen": null,
+        "detailNen": "",
+        "isObserver": true
+    },
+    "41": {
+        "name": "ニペイパー",
+        "belongId": "16",
+        "note": "",
+        "thumbnailImage": "ニペイパー_thumbnail.jpg",
+        "observerPrinceId": "12",
+        "detailNen": "",
+        "isObserver": true
+    },
+    "42": {
+        "name": "ブラッヂ",
+        "belongId": "17",
+        "note": "",
+        "thumbnailImage": "ブラッヂ_thumbnail.jpg",
+        "observerPrinceId": "12",
+        "detailNen": "",
+        "isObserver": true
+    },
+    "43": {
+        "name": "ラロック",
+        "belongId": "18",
+        "note": "",
+        "thumbnailImage": "ラロック_thumbnail.jpg",
+        "observerPrinceId": "12",
+        "detailNen": "",
+        "isObserver": true
+    },
+    "44": {
+        "name": "タフディー",
+        "belongId": "19",
+        "note": "第12王子モモゼ殺害者。ハンゾーにより殺される。",
+        "thumbnailImage": "タフディー_thumbnail.jpg",
+        "observerPrinceId": "12",
+        "detailNen": "",
+        "isObserver": true,
+        "isDead": true
+    },
+    "45": {
+        "name": "ナゴマム",
+        "belongId": "20",
+        "note": "",
+        "thumbnailImage": "ナゴマム_thumbnail.jpg",
+        "observerPrinceId": "12",
+        "detailNen": "",
+        "isObserver": true
+    },
+    "46": {
+        "name": "リョウジ",
+        "belongId": "20",
+        "note": "",
+        "thumbnailImage": "リョウジ_thumbnail.jpg",
+        "observerPrinceId": "11",
+        "detailNen": "",
+        "isObserver": false
+    },
+    "47": {
+        "name": "バチャエム",
+        "belongId": "20",
+        "note": "",
+        "thumbnailImage": "バチャエム_thumbnail.jpg",
+        "observerPrinceId": "11",
+        "detailNen": "",
+        "isObserver": false
+    },
+    "48": {
+        "name": "クラピカ",
+        "belongId": "26",
+        "note": "",
+        "thumbnailImage": "クラピカ_thumbnail.jpg",
+        "observerPrinceId": "14",
+        "detailNen": "",
+        "useNen": true,
+        "isObserver": false
+    },
+    "49": {
+        "name": "サカタ",
+        "belongId": "3",
+        "note": "第3王子によるクラピカを手助けする命令で、第14王子の警護につく",
+        "thumbnailImage": "サカタ.jpg",
+        "observerPrinceId": "14",
+        "detailNen": "",
+        "useNen": false,
+        "isObserver": false
+    },
+    "50": {
+        "name": "ハシトウ",
+        "belongId": "3",
+        "note": "第3王子によるクラピカを手助けする命令で、第14王子の警護につく",
+        "thumbnailImage": "ハシトウ.jpg",
+        "observerPrinceId": "14",
+        "detailNen": "",
+        "useNen": false,
+        "isObserver": false
+    },
+    "51": {
+        "name": "ムッセ",
+        "belongId": "1",
+        "note": "カミーラに殺される。念能力はベンジャミンに継承された。",
+        "thumbnailImage": "ムッセ_thumbnail.jpg",
+        "observerPrinceId": "2",
+        "detailNen": "",
+        "isDead": true,
+        "useNen": true,
+        "isObserver": true
+    }
+}

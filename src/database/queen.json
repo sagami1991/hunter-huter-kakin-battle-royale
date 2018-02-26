@@ -1,0 +1,72 @@
+{
+    "15": {
+        "id": 15,
+        "name": "第1王妃 ウンマ",
+        "thumbnailImage": "unknown.png",
+        "childrenId": [
+            "1",
+            "4"
+        ]
+    },
+    "16": {
+        "id": 16,
+        "name": "第2王妃 ドゥアズル",
+        "thumbnailImage": "ドゥアズル_thumbnail.png",
+        "childrenId": [
+            "2",
+            "5",
+            "7",
+            "9"
+        ]
+    },
+    "17": {
+        "id": 17,
+        "name": "第3王妃 トウチョウレイ",
+        "thumbnailImage": "unknown.png",
+        "childrenId": [
+            "3"
+        ]
+    },
+    "18": {
+        "id": 18,
+        "name": "第4王妃 カットローソ",
+        "thumbnailImage": "unknown.png",
+        "childrenId": [
+            "6"
+        ]
+    },
+    "19": {
+        "id": 19,
+        "name": "第5王妃 スィンコスィンコ",
+        "thumbnailImage": "スィンコスィンコ_thumbnail.png",
+        "childrenId": [
+            "8"
+        ]
+    },
+    "20": {
+        "id": 20,
+        "name": "第6王妃 セイコ",
+        "thumbnailImage": "セイコ",
+        "childrenId": [
+            "10",
+            "11"
+        ]
+    },
+    "21": {
+        "id": 21,
+        "name": "第7王妃 セヴァンチ",
+        "thumbnailImage": "セヴァンチ_thumbnail.png",
+        "childrenId": [
+            "12",
+            "13"
+        ]
+    },
+    "22": {
+        "id": 22,
+        "name": "第8王妃 オイト",
+        "thumbnailImage": "オイト_thumbnail.png",
+        "childrenId": [
+            "14"
+        ]
+    }
+}

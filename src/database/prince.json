@@ -1,0 +1,132 @@
+{
+    "1": {
+        "id": 1,
+        "name": "第1王子 ベンジャミン",
+        "thumbnailImage": "ベンジャミン.png",
+        "motherId": "15",
+        "skillName": "星を継ぐもの（ベンジャミンバトン）",
+        "skillDetail": "",
+        "nenBeastName": "",
+        "nenBeastOverview": "？",
+        "nenBeastImage": ""
+    },
+    "2": {
+        "id": 2,
+        "name": "第2王子 カミーラ",
+        "thumbnailImage": "カミーラ.png",
+        "skillName": "百万回生きた猫（ネコノナマエ）",
+        "skillDetail": "",
+        "motherId": "16",
+        "nenBeastName": "",
+        "nenBeastOverview": "操作系、強制型。ある条件を満たしたものを意のままに操る",
+        "nenBeastImage": "？"
+    },
+    "3": {
+        "id": 3,
+        "name": "第3王子 チョウライ",
+        "thumbnailImage": "チョウライ.png",
+        "motherId": "17",
+        "nenBeastName": "",
+        "nenBeastOverview": "？",
+        "nenBeastImage": ""
+    },
+    "4": {
+        "id": 4,
+        "name": "第4王子 ツェリードニヒ",
+        "thumbnailImage": "ツェリードニヒ.jpg",
+        "motherId": "15",
+        "nenBeastName": "",
+        "nenBeastOverview": "？",
+        "nenBeastImage": ""
+    },
+    "5": {
+        "id": 5,
+        "name": "第5王子 ツベッパ",
+        "thumbnailImage": "TsubeppaAv.jpg",
+        "motherId": "16",
+        "nenBeastName": "",
+        "nenBeastOverview": "変化系の能力。発動には共同研究者（パートナー）が必要となる共存型。守護霊獣の体内で様々な効果を持つ薬品を生成することができる。",
+        "nenBeastImage": ""
+    },
+    "6": {
+        "id": 6,
+        "name": "第6王子 タイソン",
+        "thumbnailImage": "TysonAv.jpg",
+        "motherId": "18",
+        "nenBeastName": "",
+        "nenBeastOverview": "放出系で拡散・徴集型の能力。「タイソン教典」を受け取った者に目玉ジャクシが憑く。目玉ジャクシは宿主からオーラを徴集し替わりに幸福を与える。この幸福度は「タイソン教典」の熟読度によって変化。ただし、教典唯一の禁忌を破ると厳しい罰が下る。",
+        "nenBeastImage": ""
+    },
+    "7": {
+        "id": 7,
+        "name": "第7王子 ルズールス",
+        "thumbnailImage": "ルズールス.png",
+        "motherId": "16",
+        "nenBeastName": "",
+        "nenBeastOverview": "具現化系 半強制型の操作能力 標的の欲望を具現化し罠を張る。標的が罠にはまる（欲望を満たす）事で発動する",
+        "nenBeastImage": ""
+    },
+    "8": {
+        "id": 8,
+        "name": "第8王子 サレサレ",
+        "thumbnailImage": "サレサレ_thumbnail.png",
+        "motherId": "19",
+        "nenBeastName": "",
+        "nenBeastOverview": "拡散系の操作能力 強制力は弱いが多くの人間を操ることが可能。守護霊獣から出ている白い煙を吸い込むほど王子への行為が増す。一定の煙を吸い込み続けた人物の頭上に守護霊獣の分身が発生する。その人物がまた別の誰かと接触し煙を吸うことで王子への好意を伝染させる事が可能",
+        "nenBeastImage": ""
+    },
+    "9": {
+        "id": 9,
+        "name": "第9王子 ハルケンブルグ",
+        "thumbnailImage": "ハルケンブルグ_thumbnail.png",
+        "motherId": "16",
+        "nenBeastName": "",
+        "nenBeastOverview": "強化系 相互協力型の能力。羽の刻印を持つ者が王子の元に多く集まるほど個々のポテンシャルを高め合う。その集団が互いに意志を統一し能力を発動した時の威力はあらゆる念能力の中でも最大級となる。ハルケンブルグ王子への忠誠心がない者には刻印は消える。",
+        "nenBeastImage": ""
+    },
+    "10": {
+        "id": 10,
+        "name": "第10王子 カチョウ",
+        "thumbnailImage": "KachouAv.jpg",
+        "motherId": "20",
+        "nenBeastName": "",
+        "nenBeastOverview": "？",
+        "nenBeastImage": ""
+    },
+    "11": {
+        "id": 11,
+        "name": "第11王子 フウゲツ",
+        "thumbnailImage": "FuugetsuAv.jpg",
+        "motherId": "20",
+        "nenBeastName": "",
+        "nenBeastOverview": "？",
+        "nenBeastImage": ""
+    },
+    "12": {
+        "id": 12,
+        "name": "第12王子 モモゼ",
+        "thumbnailImage": "モモゼ.png",
+        "motherId": "21",
+        "nenBeastName": "",
+        "nenBeastOverview": "操作系 半強制型の能力",
+        "nenBeastImage": ""
+    },
+    "13": {
+        "id": 13,
+        "name": "第13王子 マラヤーム",
+        "thumbnailImage": "MarayaamAv.jpg",
+        "motherId": "21",
+        "nenBeastName": "",
+        "nenBeastOverview": "？",
+        "nenBeastImage": ""
+    },
+    "14": {
+        "id": 14,
+        "name": "第14王子 ワブル",
+        "thumbnailImage": "ワブル.png",
+        "motherId": "22",
+        "nenBeastName": "",
+        "nenBeastOverview": "？",
+        "nenBeastImage": ""
+    }
+}
