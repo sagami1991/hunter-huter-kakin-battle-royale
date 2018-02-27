@@ -4,6 +4,7 @@ export interface ICellOption<T> {
     readonly width?: number;
     readonly parse: (row: T) => string;
     readonly hover?: (row: T) => HTMLElement;
+    readonly isCenter?: boolean;
 }
 export interface IListOption<T> {
     readonly data?: T[] | Map<string, T>;
@@ -21,23 +22,22 @@ export class ListView<T> {
         this.cellOptions = option.cellOptions;
         this.element = elementBuilder(this.template());
         this.tBodyContainer = this.element.querySelector("tbody")!;
-        // tslint:disable-next-line:variable-name
-        addDelegateEventListener(this.element, "click", ".tbody-tr", (_event, tr) => {
-            tr.classList.toggle("highlight-row", true);
-            this.element.querySelectorAll("tr").forEach((trElem) => {
-                if (trElem !== tr) {
-                    trElem.classList.remove("highlight-row");
-                }
-            });
-        });
-        addDelegateEventListener(this.element, "mouseover", ".list-view-table-td", (_event, td) => {
-            const columnIndex = td.getAttribute("column-index")!;
-            const hoverCallback = this.cellOptions[+columnIndex].hover;
-            if (hoverCallback) {
-                const rowIndex = td.getAttribute("row-index")!;
-                hoverCallback(this.tableDataRows[+rowIndex]);
-            }
-        });
+        // addDelegateEventListener(this.element, "click", ".tbody-tr", (_event, tr) => {
+        //     tr.classList.toggle("highlight-row", true);
+        //     this.element.querySelectorAll("tr").forEach((trElem) => {
+        //         if (trElem !== tr) {
+        //             trElem.classList.remove("highlight-row");
+        //         }
+        //     });
+        // });
+        // addDelegateEventListener(this.element, "mouseover", ".list-view-table-td", (_event, td) => {
+        //     const columnIndex = td.getAttribute("column-index")!;
+        //     const hoverCallback = this.cellOptions[+columnIndex].hover;
+        //     if (hoverCallback) {
+        //         const rowIndex = td.getAttribute("row-index")!;
+        //         hoverCallback(this.tableDataRows[+rowIndex]);
+        //     }
+        // });
         if (option.data) {
             this.refreshData(option.data);
         }
@@ -72,9 +72,11 @@ export class ListView<T> {
     private bodyTemplate(data: T[] | Map<string, T>) {
         return TemplateUtil.each(data, (row, i) => `
             <tr class="tbody-tr" data-index="${i}">
-            ${TemplateUtil.each(this.cellOptions, (cell, j) => `
-                <td class="list-view-table-td" row-index="${i}" column-index="${j}">${cell.parse(row)}</td>`
-            )}
+            ${TemplateUtil.each(this.cellOptions, (cell, j) => {
+                return `<td class="list-view-table-td ${cell.isCenter ? "td-center" : ""}" ` +
+                    ` row-index="${i}" column-index="${j}">` +
+                    `${cell.parse(row)}</td>`;
+            })}
             </tr>
         `);
     }

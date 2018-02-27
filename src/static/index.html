@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,18 @@
     <link rel="stylesheet" href="/style.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59778844-9"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-59778844-9');
+        gtag('config', 'UA-59778844-9');
     </script>
 
 </head>
+
 <body>
     <div class="main-header">
-        <div class="header-logo-container">
+        <div class="header-inline-container">
             <a href="/">
                 <img class="header-logo" src="./image/hunter2.png" alt="ハンターハンター 王位継承戦 登場人物データベース">
             </a>
@@ -28,6 +30,7 @@
         <div class="main-tab-container">
             <a class="main-tab" href="/all-prince" attr-page-name="all-prince">王子一覧</a>
             <a class="main-tab" href="/all-normal-person" attr-page-name="all-normal-person">警護人一覧</a>
+            <a class="main-tab" href="/time-table" attr-page-name="time-table">タイムテーブル（仮）</a>
         </div>
         <div class="tab-content">
             <h1 class="content-h1"></h1>
@@ -36,14 +39,26 @@
                     <span class="icon-common icon-update"></span>
                     <div class="updated-value"></div>
                 </div>
-                <div class="page-views-container">
+                <!-- <div class="page-views-container">
                     <span class="icon-common icon-eye"></span>
                     <div class="page-views-value"></div>
-                </div>
+                </div> -->
             </div>
             <div id="content-area"></div>
         </div>
     </div>
+    <div class="site-footer">
+        <div class="footer-inline-container">
+            <div class="footer-logo">
+                <img src="./image/hunter2.png">
+            </div>
+            <div class="copy-right">
+                2018 ハンターハンター 王位継承戦データベース No Rights Reserved.
+            </div>
+        </div>
+
+    </div>
     <script src="/app.js"></script>
 </body>
+
 </html>

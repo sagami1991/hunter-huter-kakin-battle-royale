@@ -81,10 +81,11 @@
     "32": {
         "name": "ウッディー",
         "belong": "不明",
-        "note": "サイレントマジョリティにより死亡。最初の犠牲者。死亡時刻12時15分-12時30分",
+        "note": "サイレントマジョリティにより死亡。最初の犠牲者。死亡時刻12時15分-12時30分。第14王子の初期警護メンバーはハンター以外全て監視役。",
         "thumbnailImage": "ウッディー_thumbnail.png",
         "observerPrinceId": "14",
-        "isDead": true
+        "isDead": true,
+        "isObserver": true
     },
     "33": {
         "name": "ビル",
@@ -98,10 +99,11 @@
     "34": {
         "name": "サイールド",
         "belongId": "26",
-        "note": "第12王子の霊獣に操られ、3人を殺害。退去済み",
+        "note": "第12王子の霊獣に操られ、3人を殺害。死んではいないが強制退去済み",
         "thumbnailImage": "サイールド_thumbnail.jpg",
         "observerPrinceId": "14",
         "useNen": true,
+        "isDead": true,
         "detailNen": "小さな虫を操る"
     },
     "35": {
@@ -560,6 +562,30 @@
         "detailNen": "",
         "isDead": false,
         "useNen": true,
+        "isObserver": true,
+        "isAttendedTraining": false
+    },
+    "76": {
+        "name": "不明",
+        "belongId": null,
+        "note": "第12王子モモゼの霊獣により操られたサイールドにより殺害",
+        "thumbnailImage": "不明_14_1_thumbnail.jpg",
+        "observerPrinceId": "14",
+        "detailNen": "",
+        "isDead": true,
+        "useNen": null,
+        "isObserver": true,
+        "isAttendedTraining": false
+    },
+    "77": {
+        "name": "不明",
+        "belongId": null,
+        "note": "第12王子モモゼの霊獣により操られたサイールドにより殺害",
+        "thumbnailImage": "不明14_2_thumbnail.jpg",
+        "observerPrinceId": "14",
+        "detailNen": "",
+        "isDead": true,
+        "useNen": null,
         "isObserver": true,
         "isAttendedTraining": false
     }

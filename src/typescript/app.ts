@@ -1,6 +1,8 @@
 import { AllPrinceView } from "./page/all_prince_page";
 import { BasePageView } from "./page/page";
 import { AllNormalPersonView } from "./page/all_normal_person_page";
+import { dateFormat } from "./component/commonUtils";
+import { TimeTableView } from "./page/time_table_page";
 
 interface IPage {
     path: string[];
@@ -19,25 +21,41 @@ class MainView {
             }, {
                 path: ["person"],
                 view: AllPrinceView
+            }, {
+                path: ["time-table"],
+                view: TimeTableView
             }
         ];
-
-        const contentElement = document.querySelector("#content-area") as HTMLElement;
-        const tabContainer = document.querySelector(".main-tab-container") as HTMLElement;
         const nowPathNames = location.pathname.slice(1).split("/");
         for (const page of pages) {
             if (page.path.includes(nowPathNames[0])) {
-                const view = new page.view();
-                const tabElement =
-                    tabContainer.querySelector(`.main-tab[attr-page-name="${view.pageName}"]`) as HTMLElement;
-                this.setTitle(view.title);
-                tabElement.classList.add("main-tab-active");
-                view.render();
-                contentElement.appendChild(view.element!);
+                this.renderContent(page.view);
                 return;
             }
         }
         this.setTitle("ページが見つかりません")
+    }
+
+    private renderContent(View: new () => BasePageView) {
+        const contentElement = document.querySelector("#content-area") as HTMLElement;
+        const tabContainer = document.querySelector(".main-tab-container") as HTMLElement;
+        const view = new View();
+        const tabElement =
+            tabContainer.querySelector(`.main-tab[attr-page-name="${view.pageName}"]`) as HTMLElement;
+        this.setTitle(view.title);
+        this.setMetadata(view.getUpdatedAt(), view.getPV())
+        tabElement.classList.add("main-tab-active");
+        view.render();
+        contentElement.appendChild(view.element!);
+        return;
+    }
+
+    private setMetadata(updatedAt: Date, pv: number) {
+        const metadataElement = document.querySelector(".content-meta-data") as HTMLElement;
+        const updatedAtElement = metadataElement.querySelector(".updated-value") as HTMLElement;
+        // const pvElement = metadataElement.querySelector(".page-views-value") as HTMLElement;
+        updatedAtElement.innerText = dateFormat(updatedAt);
+        // pvElement.innerText = "" + pv;
     }
 
     private setTitle(title: string) {

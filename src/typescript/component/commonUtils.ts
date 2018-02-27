@@ -12,7 +12,8 @@ export function elementBuilder(html: string) {
 }
 
 export function addDelegateEventListener(
-    elem: Element, eventName: "click" | "mouseover", selector: string, cb: (event: Event, originalTarget: Element) => void) {
+    elem: Element, eventName: "click" | "mouseover",
+    selector: string, cb: (event: Event, originalTarget: Element) => void) {
     elem.addEventListener(eventName, (event) => {
         let target = event.target as Element;
         while (target && target !== event.currentTarget) {
@@ -26,7 +27,7 @@ export function addDelegateEventListener(
     });
 }
 
-type IForEachCallback<T> = (item: T, index: number , key?: string) => string;
+type IForEachCallback<T> = (item: T, index: number, key?: string) => string;
 export namespace TemplateUtil {
     export function each<T>(collection: T[] | Map<string, T>, cb: IForEachCallback<T>): string {
         if (collection instanceof Array) {
@@ -71,12 +72,12 @@ export function numberCommaFormat(x: number) {
 }
 
 export function getUuid() {
-  function s4() {
-    return Math.floor((1 + Math.random()) * 0x10000)
-      .toString(16)
-      .substring(1);
-  }
-  return s4() + s4() + "-" + s4() + "-" + s4() + "-" + s4() + "-" + s4() + s4() + s4();
+    function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    }
+    return s4() + s4() + "-" + s4() + "-" + s4() + "-" + s4() + "-" + s4() + s4() + s4();
 }
 
 export function getCookies() {
@@ -88,6 +89,20 @@ export function getThumbnailImage(fileName: string, className?: string) {
     return `<div class="thumbail-container ${className || ""}">` +
         `<img class="character-image-thumbnail" src="/character/${fileName}" />` +
         `</div>`;
+}
+
+export function createModal(content: HTMLElement) {
+    const modalElement = elementBuilder(`
+    <div class="modal-overlay">
+        <div class="modal-content"></div>
+    </div>`
+    );
+    modalElement.querySelector(".modal-content")!.appendChild(content);
+    modalElement.addEventListener("click", (event) => {
+        if (event.target === modalElement) {
+            modalElement.remove();
+        }
+    })
 }
 
 export function sortMap<T>(map: Map<string, T>, sortOptions: Array<ISortOption<T>>) {
@@ -102,4 +117,19 @@ export function sortMap<T>(map: Map<string, T>, sortOptions: Array<ISortOption<T
         return 0;
     });
     return new Map(array);
+}
+
+/** yyyy年m月d日のみ */
+export function dateFormat(date: Date) {
+    return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+}
+
+export type IconName = "icon-information" | "icon-sort";
+export type IconSize = "s" | "m";
+
+export function getSvgIcon(icon: IconName, size: IconSize = "m", className?: string): string {
+    return `
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg icon-${size} ${className || ""}">
+            <use xlink:href="#${icon}"/>
+        </svg>`;
 }

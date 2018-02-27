@@ -1,8 +1,8 @@
 import { BasePageView } from "./page";
 import { Database } from "../database";
 import { ListView } from "../component/listView";
-import { IPrince } from "../interfaces";
-import { getThumbnailImage } from "../component/commonUtils";
+import { IPrince, IQueen } from "../interfaces";
+import { getThumbnailImage, elementBuilder } from "../component/commonUtils";
 
 export class AllPrinceView extends BasePageView {
 
@@ -14,21 +14,56 @@ export class AllPrinceView extends BasePageView {
         return "王子・王妃一覧";
     }
     public getUpdatedAt() {
-        return new Date(2018, 1, 28);
+        return new Date(2018, 1, 27);
     }
 
     public render() {
+        this._element = elementBuilder(`
+        <div class="all-prince-view">
+            <h2 class="content-h2">王子一覧</h2>
+            <div class="prince-list-container"></div>
+            <h2 class="content-h2">王妃一覧</h2>
+            <div class="queen-list-container"></div>
+        </div>
+        `);
         const princes = Database.getAllPrince();
         const queens = Database.getAllQueen();
-        const listView = new ListView<IPrince>({
+        const princeListView = new ListView<IPrince>({
             data: princes,
             cellOptions: [
-                { label: "画像", parse: (prince) => getThumbnailImage(prince.thumbnailImage) },
+                {
+                    label: "画像",
+                    parse: (prince) => {
+                        return getThumbnailImage(prince.thumbnailImage, prince.isDead ? "dead-image-cover" : "")
+                    }
+                },
                 { label: "名前", parse: (prince) => prince.name },
                 { label: "母親画像", parse: (prince) => getThumbnailImage(queens.get(prince.motherId)!.thumbnailImage) },
                 { label: "母親", parse: (prince) => queens.get(prince.motherId)!.name },
             ],
         });
-        this._element = listView.element;
+
+        const queenListView = new ListView<IQueen>({
+            data: queens,
+            cellOptions: [
+                {
+                    label: "画像",
+                    parse: (queen) => {
+                        return getThumbnailImage(queen.thumbnailImage, queen.isDead ? "dead-image-cover" : "")
+                    }
+                },
+                { label: "名前", parse: (queen) => queen.name },
+                { label: "子供", parse: (queen) => {
+                    return queen.childrenId.map((childId) => {
+                        const prince = princes.get(childId)!;
+                        return `<div class="td-image-and-text">`
+                                + getThumbnailImage(prince.thumbnailImage) + prince.name
+                                + `</div>`;
+                    }).join("");
+                } },
+            ],
+        });
+        this._element.querySelector(".prince-list-container")!.appendChild(princeListView.element);
+        this._element.querySelector(".queen-list-container")!.appendChild(queenListView.element);
     }
 }

@@ -1,0 +1,51 @@
+@mixin commonHoverBg {
+    &.hover,
+    &:hover {
+        background-color: $hoverColor;
+    }
+    &.active,
+    &:active {
+        background-color: $activeColor;
+    }
+}
+
+@mixin commonHoverBorder {
+    &:hover {
+        border-color: $hoverBorderColor;
+    }
+    &:active {
+        border-color: $activeBorderColor;
+    }
+}
+
+.my-button-component {
+    padding: 0;
+    display: flex;
+    background-color: $baseWhite;
+    align-items: center;
+    justify-content: center;
+    @include commonHoverBg;
+    @include commonHoverBorder;
+    &.my-button-normal {
+        min-width: 120px;
+        border: 1px solid $inputBorderColor;
+        .icon-svg {
+            margin-right: 4px;
+        }
+        .my-button-label {
+            text-align: center;
+        }
+        .my-button-label-main {
+            font-size: 11px;
+        }
+        .my-button-label-sub {
+            font-size: 8px;
+            color: gray;
+        }
+    }
+    &.my-button-icon-only {
+        width: 30px;
+        height: 30px;
+        border-width: 0;
+    }
+}

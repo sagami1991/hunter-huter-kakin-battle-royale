@@ -12,11 +12,9 @@ export abstract class BasePageView {
     }
     public abstract get pageName(): string;
     public abstract getUpdatedAt(): Date;
-    public render() {
-
-    }
+    public abstract render(): void;
     public getPV() {
-
+        return 44;
     }
 
     public addPV() {

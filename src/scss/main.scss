@@ -1,12 +1,21 @@
-$mainYellow: #ffda45;
-$grayYellow: #d4b331;
-$thinYellow: #ffea97;
 @import "./icon.scss";
+@import "./modal.scss";
+@import "./table.scss";
+@import "./header-footer.scss";
+@import "./page/all-prince-view.scss";
+@import "./component.scss";
+$mainYellow: #ffda45;
+$thinYellow: #ffea97;
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
+    min-height: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Japanese", "\\30D2ラギノ角ゴProN W3", メイリオ, "MS PGothic";
     color: #333;
-    background: #fbfbfb;
+    background-color: #fbfbfb;
 }
 
 a {
@@ -17,25 +26,6 @@ a {
     }
     &:visited {
         color: #7b3fb9;
-    }
-}
-
-.main-header {
-    width: 100%;
-    background-color: $mainYellow;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid $grayYellow;
-    .header-logo-container {
-        width: calc(100% - 40px);
-        max-width: 1150px;
-        height: 60px;
-        position: relative;
-        .header-logo {
-            height: 100%;
-        }
     }
 }
 
@@ -80,11 +70,19 @@ a {
 
 .content-h1 {
     margin: 14px 0 16px;
+    padding-left: 12px;
+    padding-bottom: 4px;
     border-color: #ffda45;
     border-style: solid;
     border-width: 0 0 1px 8px;
+}
+
+.content-h2 {
+    margin: 38px 0 12px;
     padding-left: 12px;
-    padding-bottom: 4px;
+    font-size: 26px;
+    border-left: 6px solid #ffda45;
+    font-weight: 500;
 }
 
 .content-meta-data {
@@ -148,63 +146,4 @@ a {
         width: 100%;
         object-fit: cover;
     }
-}
-
-.list-view-table {
-    background: white;
-    .td-image-and-text {
-        display: flex;
-        align-items: center;
-        .thumbail-container {
-            margin-right: 4px;
-        }
-    }
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin-bottom: 16px;
-    td,
-    th {
-        padding: 5px 5px;
-    }
-    tr {
-        border-top: 1px solid #dadada;
-    }
-    tbody tr:last-child {
-        border-bottom: 1px solid #dadada;
-    }
-    thead tr {
-        border-bottom: 1px solid #b3b3b3;
-        border-top: 1px solid #b3b3b3;
-    }
-}
-
-.tooltip-box-container {
-    position: relative;
-    &:hover .tooltip-box {
-        display: block;
-    }
-    .tooltip-box {
-        display: none;
-        position: absolute;
-        bottom: -2.8em;
-        left: 0.3em;
-        z-index: 9999;
-        padding: 0.3em 0.5em;
-        color: #FFFFFF;
-        background: #c72439;
-        border-radius: 0.5em;
-        &:after {
-            width: 100%;
-            content: "";
-            display: block;
-            position: absolute;
-            left: 0.5em;
-            top: -8px;
-            border-top:8px solid transparent;
-            border-left:8px solid #c72439;
-        }
-
-}
 }

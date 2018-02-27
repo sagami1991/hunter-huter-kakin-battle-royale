@@ -1,0 +1,32 @@
+.list-view-table {
+    background: white;
+    td.td-center {
+        text-align: center;
+    }
+    .td-image-and-text {
+        display: flex;
+        align-items: center;
+        .thumbail-container {
+            margin-right: 4px;
+        }
+    }
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 16px;
+    td,
+    th {
+        padding: 5px 5px;
+    }
+    tr {
+        border-top: 1px solid #dadada;
+    }
+    tbody tr:last-child {
+        border-bottom: 1px solid #dadada;
+    }
+    thead tr {
+        border-bottom: 1px solid #b3b3b3;
+        border-top: 1px solid #b3b3b3;
+    }
+}
