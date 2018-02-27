@@ -1,3 +1,5 @@
+import { ISortOption } from "../interfaces";
+
 export function elementBuilder(html: string) {
     const container = document.createElement("div");
     container.innerHTML = html;
@@ -10,7 +12,7 @@ export function elementBuilder(html: string) {
 }
 
 export function addDelegateEventListener(
-    elem: Element, eventName: "click", selector: string, cb: (event: Event, originalTarget: Element) => void) {
+    elem: Element, eventName: "click" | "mouseover", selector: string, cb: (event: Event, originalTarget: Element) => void) {
     elem.addEventListener(eventName, (event) => {
         let target = event.target as Element;
         while (target && target !== event.currentTarget) {
@@ -75,4 +77,29 @@ export function getUuid() {
       .substring(1);
   }
   return s4() + s4() + "-" + s4() + "-" + s4() + "-" + s4() + "-" + s4() + s4() + s4();
+}
+
+export function getCookies() {
+    const cookies = document.cookie.split(";").map((pair) => pair.split("=") as [string, string]);
+    return new Map(cookies);
+}
+
+export function getThumbnailImage(fileName: string, className?: string) {
+    return `<div class="thumbail-container ${className || ""}">` +
+        `<img class="character-image-thumbnail" src="/character/${fileName}" />` +
+        `</div>`;
+}
+
+export function sortMap<T>(map: Map<string, T>, sortOptions: Array<ISortOption<T>>) {
+    const array = [...map];
+    array.sort(([aKey, aVal], [bKey, bVal]) => {
+        for (const sortOption of sortOptions) {
+            const aValue = sortOption.getSortValue(aVal);
+            const bValue = sortOption.getSortValue(bVal);
+            if (aValue < bValue) { return sortOption.order * -1; }
+            if (aValue > bValue) { return sortOption.order * 1; }
+        }
+        return 0;
+    });
+    return new Map(array);
 }

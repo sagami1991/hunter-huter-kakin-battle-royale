@@ -2,7 +2,7 @@
     "15": {
         "id": 15,
         "name": "第1王妃 ウンマ",
-        "thumbnailImage": "unknown.png",
+        "thumbnailImage": "ウンマ.jpg",
         "childrenId": [
             "1",
             "4"
@@ -22,15 +22,15 @@
     "17": {
         "id": 17,
         "name": "第3王妃 トウチョウレイ",
-        "thumbnailImage": "unknown.png",
+        "thumbnailImage": "トウチョウレイ.jpg",
         "childrenId": [
             "3"
         ]
     },
     "18": {
         "id": 18,
-        "name": "第4王妃 カットローソ",
-        "thumbnailImage": "unknown.png",
+        "name": "第4王妃 カットローノ",
+        "thumbnailImage": "カットローノ.jpg",
         "childrenId": [
             "6"
         ]
@@ -46,7 +46,7 @@
     "20": {
         "id": 20,
         "name": "第6王妃 セイコ",
-        "thumbnailImage": "セイコ",
+        "thumbnailImage": "セイコ_thumbnail.jpg",
         "childrenId": [
             "10",
             "11"

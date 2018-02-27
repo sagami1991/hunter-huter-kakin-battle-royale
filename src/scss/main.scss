@@ -48,6 +48,7 @@ a {
     display: flex;
     padding-left: 4px;
     .main-tab {
+        color: #333;
         font-size: 13px;
         display: block;
         cursor: pointer;
@@ -150,6 +151,7 @@ a {
 }
 
 .list-view-table {
+    background: white;
     .td-image-and-text {
         display: flex;
         align-items: center;
@@ -176,4 +178,33 @@ table {
         border-bottom: 1px solid #b3b3b3;
         border-top: 1px solid #b3b3b3;
     }
+}
+
+.tooltip-box-container {
+    position: relative;
+    &:hover .tooltip-box {
+        display: block;
+    }
+    .tooltip-box {
+        display: none;
+        position: absolute;
+        bottom: -2.8em;
+        left: 0.3em;
+        z-index: 9999;
+        padding: 0.3em 0.5em;
+        color: #FFFFFF;
+        background: #c72439;
+        border-radius: 0.5em;
+        &:after {
+            width: 100%;
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0.5em;
+            top: -8px;
+            border-top:8px solid transparent;
+            border-left:8px solid #c72439;
+        }
+
+}
 }

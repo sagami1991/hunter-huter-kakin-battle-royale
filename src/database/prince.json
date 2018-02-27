@@ -109,7 +109,9 @@
         "motherId": "21",
         "nenBeastName": "",
         "nenBeastOverview": "操作系 半強制型の能力",
-        "nenBeastImage": ""
+        "nenBeastImage": "",
+        "isDead": true,
+        "note": "第7王妃セヴァンチの命令により、警護が第13王子に回された。警護は6人のみ。"
     },
     "13": {
         "id": 13,

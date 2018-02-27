@@ -1,4 +1,4 @@
-import { IPrince, IQueen, IPerson, INormalPerson } from "./interfaces";
+import { IPrince, IQueen, IPerson, INormalPerson, IBelong } from "./interfaces";
 
 export class Database {
     public static getAllPrince() {
@@ -32,7 +32,7 @@ export class Database {
     }
 
     public static getAllbelong() {
-        const belongs = require("../database/belong.json") as { [key: string]: INormalPerson };
+        const belongs = require("../database/belong.json") as { [key: string]: IBelong };
         const belongMap = objectToMap(belongs);
         return belongMap;
     }

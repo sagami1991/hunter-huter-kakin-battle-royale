@@ -4,6 +4,7 @@ export interface IPerson {
     thumbnailImage: string;
     useNen?: boolean;
     isDead?: boolean;
+    isAttendedTraining?: boolean;
 }
 export interface IPrince extends IPerson {
     motherId: string;
@@ -24,8 +25,13 @@ export interface INormalPerson extends IPerson {
 
 }
 
-export interface IPage {
-    path: string;
-    title: string;
-    updatedAt: Date;
+export interface IBelong {
+    bossPersonId: string;
+    name: string;
+}
+
+export interface ISortOption<T> {
+    getSortValue: (row: T) => string | number;
+    /** 1昇順　-1降順 */
+    order: 1 | -1;
 }

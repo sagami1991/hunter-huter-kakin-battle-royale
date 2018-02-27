@@ -13,7 +13,7 @@
         "belong": "第1王子私設兵",
         "belongId": "1",
         "thumbnailImage": "ビンセント_thumbnail.png",
-        "note": "クラピカに返り討ちに遭い死亡。能力はベンジャミンに継承された",
+        "note": "クラピカに返り討ちに遭い死亡。能力「エアブロウ」はベンジャミンに継承された",
         "observerPrinceId": "14",
         "useNen": true,
         "nenDetail": "エアブロウ",
@@ -73,7 +73,7 @@
     "31": {
         "name": "ハンゾー",
         "belongId": "26",
-        "note": "クラピカ経由での任務。クラピカとは同期繋がり。第12王子が死亡したので、第13王子の警護に移動。",
+        "note": "クラピカ経由での任務。クラピカとは同期繋がり。第7王妃セヴァンチの命令により、第13王子に警護に移動。",
         "thumbnailImage": "ハンゾー.png",
         "observerPrinceId": "12",
         "useNen": true
@@ -92,7 +92,8 @@
         "note": "",
         "thumbnailImage": "ビル.jpg",
         "observerPrinceId": "14",
-        "useNen": true
+        "useNen": true,
+        "isAttendedTraining": true
     },
     "34": {
         "name": "サイールド",
@@ -152,7 +153,9 @@
         "thumbnailImage": "スラッカ_thumbnail.jpg",
         "observerPrinceId": "3",
         "useNen": null,
-        "detailNen": ""
+        "detailNen": "",
+        "isAttendedTraining": true,
+        "isObserver": true
     },
     "40": {
         "name": "ビクト",
@@ -160,7 +163,7 @@
         "note": "",
         "thumbnailImage": "ビクト_thumbnail.jpg",
         "observerPrinceId": "12",
-        "useNen": null,
+        "useNen": true,
         "detailNen": "",
         "isObserver": true
     },
@@ -236,7 +239,8 @@
         "observerPrinceId": "14",
         "detailNen": "",
         "useNen": true,
-        "isObserver": false
+        "isObserver": false,
+        "isAttendedTraining": true
     },
     "49": {
         "name": "サカタ",
@@ -246,7 +250,8 @@
         "observerPrinceId": "14",
         "detailNen": "",
         "useNen": false,
-        "isObserver": false
+        "isObserver": false,
+        "isAttendedTraining": true
     },
     "50": {
         "name": "ハシトウ",
@@ -256,17 +261,306 @@
         "observerPrinceId": "14",
         "detailNen": "",
         "useNen": false,
-        "isObserver": false
+        "isObserver": false,
+        "isAttendedTraining": true
     },
     "51": {
         "name": "ムッセ",
         "belongId": "1",
-        "note": "カミーラに殺される。念能力はベンジャミンに継承された。",
+        "note": "カミーラに殺される。念能力はベンジャミンに継承された。能力名「裏窓の鳥（シークレットウインドウ）」",
         "thumbnailImage": "ムッセ_thumbnail.jpg",
         "observerPrinceId": "2",
         "detailNen": "",
         "isDead": true,
         "useNen": true,
         "isObserver": true
+    },
+    "52": {
+        "name": "ヒュリコフ",
+        "belongId": "1",
+        "note": "",
+        "thumbnailImage": "ヒュリコフ_thumbnail.jpg",
+        "observerPrinceId": "1",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": true,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "53": {
+        "name": "マオール",
+        "belongId": "5",
+        "note": "私設兵隊長",
+        "thumbnailImage": "マオール_thumbnail.jpg",
+        "observerPrinceId": "5",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "54": {
+        "name": "テータ",
+        "belongId": "4",
+        "note": "",
+        "thumbnailImage": "テータ_thumbnail.jpg",
+        "observerPrinceId": "4",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": true,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "55": {
+        "name": "サルコフ",
+        "belongId": "4",
+        "note": "",
+        "thumbnailImage": "サルコフ_thumbnail.jpg",
+        "observerPrinceId": "4",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": true,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "56": {
+        "name": "ベレレインテ",
+        "belongId": "26",
+        "note": "",
+        "thumbnailImage": "ベレレインテ_thumbnail.jpg",
+        "observerPrinceId": "13",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": true,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "57": {
+        "name": "バリゲン",
+        "belongId": "21",
+        "note": "念講習中にサイレントマジョリティで殺される。ヒュリコフの洞察の消去法で念能力者ではない",
+        "thumbnailImage": "バリゲン_thumbnail.jpg",
+        "observerPrinceId": "13",
+        "detailNen": "",
+        "isDead": true,
+        "useNen": false,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "58": {
+        "name": "ロベリー",
+        "belongId": "36",
+        "note": "非戦闘員だがヒュリコフ観察から念能力者。サイレントマジョリティを最初に発見。その後拘束。",
+        "thumbnailImage": "ロベリー_thumbnail.jpg",
+        "observerPrinceId": "10",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": true,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "59": {
+        "name": "ユウリ",
+        "belongId": "36",
+        "note": "講習会出席時「あの空間から少しでも離れられる」",
+        "thumbnailImage": "ユウリ_thumbnail.jpg",
+        "observerPrinceId": "10",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "60": {
+        "name": "イラルディア",
+        "belongId": "37",
+        "note": "",
+        "thumbnailImage": "イラルディア_thumbnail.jpg",
+        "observerPrinceId": "11",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "61": {
+        "name": "ラジオラス",
+        "belongId": "37",
+        "note": "",
+        "thumbnailImage": "ラジオラス_thumbnail.jpg",
+        "observerPrinceId": "11",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "62": {
+        "name": "ミュハン",
+        "belongId": "4",
+        "note": "講習会でクラピカに喧嘩を売る。暗殺者の心の声とヒュリコフ洞察の消去法から念能力ではない",
+        "thumbnailImage": "ミュハン_thumbnail.jpg",
+        "observerPrinceId": "4",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": false,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "63": {
+        "name": "ダンジン",
+        "belongId": "4",
+        "note": "",
+        "thumbnailImage": "ダンジン_thumbnail.jpg",
+        "observerPrinceId": "4",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "64": {
+        "name": "ランフトリ",
+        "belongId": "3",
+        "note": "",
+        "thumbnailImage": "ランフトリ_thumbnail.jpg",
+        "observerPrinceId": "3",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "65": {
+        "name": "ムシャホ",
+        "belongId": "19",
+        "note": "",
+        "thumbnailImage": "ムシャホ_thumbnail.jpg",
+        "observerPrinceId": "8",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "66": {
+        "name": "サトビ",
+        "belongId": "16",
+        "note": "",
+        "thumbnailImage": "サトビ_thumbnail.jpg",
+        "observerPrinceId": "7",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "67": {
+        "name": "シマヌ",
+        "belongId": "40",
+        "note": "クラピカの質問により念能力者ではない",
+        "thumbnailImage": "シマヌ_thumbnail.jpg",
+        "observerPrinceId": "14",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": false,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "68": {
+        "name": "不明",
+        "belongId": null,
+        "note": "クラピカが第3王子チョウライに会うため、廊下を歩いてるところをにらんでいた。",
+        "thumbnailImage": "第8不明1_thumbnail.jpg",
+        "observerPrinceId": "8",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "69": {
+        "name": "不明",
+        "belongId": null,
+        "note": "",
+        "thumbnailImage": "第8不明2_thumbnail.jpg",
+        "observerPrinceId": "8",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "70": {
+        "name": "シェジュール",
+        "belongId": "9",
+        "note": "第9王子ハルケンブルグの霊獣により念半覚醒状態",
+        "thumbnailImage": "シェジュール_thumbnail.jpg",
+        "observerPrinceId": "9",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "71": {
+        "name": "ユヒライ",
+        "belongId": "9",
+        "note": "第9王子ハルケンブルグの霊獣により念半覚醒状態",
+        "thumbnailImage": "ユヒライ_thumbnail.jpg",
+        "observerPrinceId": "9",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "72": {
+        "name": "ロンギ",
+        "belongId": "5",
+        "note": "",
+        "thumbnailImage": "ロンギ_thumbnail.jpg",
+        "observerPrinceId": "5",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": true
+    },
+    "73": {
+        "name": "ウェルゲー",
+        "belongId": "21",
+        "note": "兵隊長",
+        "thumbnailImage": "ウェルゲー_thumbnail.jpg",
+        "observerPrinceId": "13",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "74": {
+        "name": "リハン",
+        "belongId": "1",
+        "note": "",
+        "thumbnailImage": "リハン_thumbnail.jpg",
+        "observerPrinceId": "8",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": true,
+        "isObserver": true,
+        "isAttendedTraining": false
+    },
+    "75": {
+        "name": "不明",
+        "belongId": "1",
+        "note": "",
+        "thumbnailImage": "第1私設兵-9-不明_thumbnail.jpg",
+        "observerPrinceId": "9",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": true,
+        "isObserver": true,
+        "isAttendedTraining": false
     }
 }
