@@ -5,7 +5,7 @@
   "scripts": {
     "webpack": "webpack --watch",
     "webpack-production": "NODE_ENV=production webpack",
-    "webpack-production-win": "set NODE_ENV=production && webpack",
+    "webpack-production-win": "set NODE_ENV=production&& webpack",
     "lite-server": "lite-server --baseDir=dist"
   },
   "keywords": [],

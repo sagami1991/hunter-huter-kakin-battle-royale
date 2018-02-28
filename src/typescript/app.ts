@@ -13,10 +13,10 @@ class MainView {
         this.appendInlineSvg();
         const pages: IPage[] = [
             {
-                path: ["", "all-prince"],
+                path: ["all-prince"],
                 view: AllPrinceView
             }, {
-                path: ["all-normal-person"],
+                path: ["all-normal-person", ""],
                 view: AllNormalPersonView
             }, {
                 path: ["person"],
