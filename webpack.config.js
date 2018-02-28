@@ -2,6 +2,8 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const webpack = require("webpack");
+const PROFILE = process.env.NODE_ENV === "production" ? "PRODUCTION" : "DEVELOP";
 
 module.exports = [
     // typescript -> javascript build
@@ -13,7 +15,7 @@ module.exports = [
             path: path.join(__dirname, "dist"),
             filename: "[name].js",
         },
-        devtool: "source-map",
+        devtool: PROFILE === "DEVELOP" ? "source-map" : undefined,
         resolve: {
             modules: [
                 path.resolve("./src/typescript"),
@@ -43,7 +45,9 @@ module.exports = [
         target: "web",
         externals: {
             "firebase/app": "firebase"
-        }
+        },
+        plugins: PROFILE === "PRODUCTION" ? [new webpack.optimize.UglifyJsPlugin()] : undefined
+
     },
     // sass -> css build
     {
@@ -91,7 +95,7 @@ module.exports = [
                 }]
             }]
         },
-        devtool: "source-map",
+        devtool: PROFILE === "DEVELOP" ? "source-map" : undefined,
         plugins: [
             new ExtractTextPlugin({
                 filename: "style.css"
