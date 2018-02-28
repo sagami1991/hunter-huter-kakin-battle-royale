@@ -3,7 +3,6 @@ import { BasePageView } from "./page/page";
 import { AllNormalPersonView } from "./page/all_normal_person_page";
 import { dateFormat } from "./component/commonUtils";
 import { TimeTableView } from "./page/time_table_page";
-
 interface IPage {
     path: string[];
     view: new () => BasePageView;
@@ -29,7 +28,7 @@ class MainView {
         ];
         const nowPathNames = location.pathname.slice(1).split("/");
         for (const page of pages) {
-            if (page.path.includes(nowPathNames[0])) {
+            if (page.path.some((path) => path === nowPathNames[0])) {
                 this.renderContent(page.view);
                 return;
             }

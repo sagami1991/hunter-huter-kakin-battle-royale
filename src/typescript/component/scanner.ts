@@ -37,7 +37,7 @@ export class ComponentScanner {
         if (elements.length === 0) {
             // throw new Error("Component not found");
         }
-        for (const element of elements) {
+        for (const element of Array.from(elements)) {
             const id = element.getAttribute("component-id");
             if (!id) {
                 throw new Error("予期せぬエラー component-idが存在しない");

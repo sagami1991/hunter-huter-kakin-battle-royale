@@ -17,7 +17,7 @@ export function addDelegateEventListener(
     elem.addEventListener(eventName, (event) => {
         let target = event.target as Element;
         while (target && target !== event.currentTarget) {
-            if (target.matches(selector)) {
+            if (elementSelectorMatches(target, selector)) {
                 cb(event, target);
                 break;
             }
@@ -25,6 +25,16 @@ export function addDelegateEventListener(
         }
 
     });
+}
+
+function elementSelectorMatches(element: Element, selector: string): boolean {
+    if (element.matches) {
+        return element.matches(selector);
+    } else if (element.msMatchesSelector) {
+        return element.msMatchesSelector(selector);
+    }
+    console.warn("matchesメソッドが存在しない");
+    return false;
 }
 
 type IForEachCallback<T> = (item: T, index: number, key?: string) => string;
@@ -107,7 +117,7 @@ export function createModal(content: HTMLElement) {
 }
 
 export function sortMap<T>(map: Map<string, T>, sortOptions: Array<ISortOption<T>>) {
-    const array = [...map];
+    const array = Array.from(map.entries());
     array.sort(([aKey, aVal], [bKey, bVal]) => {
         for (const sortOption of sortOptions) {
             const aValue = sortOption.getSortValue(aVal);

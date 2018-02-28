@@ -4,7 +4,6 @@ import { ListView } from "../component/listView";
 import { IPrince, INormalPerson, IQueen, ISortOption } from "../interfaces";
 import { getThumbnailImage, sortMap, elementBuilder, createModal } from "../component/commonUtils";
 import { Button } from "../component/button";
-import { ComponentScanner } from "../component/scanner";
 
 export class AllNormalPersonView extends BasePageView {
 

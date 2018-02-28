@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "webpack": "webpack --watch",
-    "webpack-production": "webpack",
+    "webpack-production": "NODE_ENV=production webpack",
+    "webpack-production-win": "set NODE_ENV=production && webpack",
     "lite-server": "lite-server --baseDir=dist"
   },
   "keywords": [],
@@ -22,7 +23,5 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0"
   },
-  "dependencies": {
-    "firebase": "^4.10.1"
-  }
+  "dependencies": {}
 }

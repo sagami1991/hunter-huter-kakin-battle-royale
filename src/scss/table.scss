@@ -1,15 +1,19 @@
 .list-view-table {
     background: white;
-    .list-view-th-label-container {
-        display: flex;
-        align-items: center;
+    .list-view-table-th {
+        .list-view-th-label-container {
+            display: flex;
+            align-items: center;
+        }
+        &.sort-active {
+            .icon-sort {
+                fill: #2196f3;
+            }
+        }
         .icon-sort {
             fill: gray;
             margin-left: 4px;
             cursor: pointer;
-            &.sort-active {
-                fill: #2196f3;
-            }
         }
     }
     .td-center {
@@ -23,6 +27,7 @@
         }
     }
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;

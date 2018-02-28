@@ -33,11 +33,11 @@ export class ListView<T> {
             }
             sortArray(this.tableDataRows, sortOption);
             this.refreshData(this.tableDataRows);
-            const activedSort = this.element.querySelector(".list-view-thead-tr .icon-sort.sort-active");
-            if (activedSort !== null) {
-                activedSort.classList.remove("sort-active");
+            const activedSortTh = this.element.querySelector(".list-view-thead-tr .sort-active");
+            if (activedSortTh !== null) {
+                activedSortTh.classList.remove("sort-active");
             }
-            th.querySelector(".icon-sort")!.classList.add("sort-active");
+            th.classList.add("sort-active");
         });
 
         if (option.data) {

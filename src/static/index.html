@@ -14,10 +14,27 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'UA-59778844-9');
     </script>
-
+    <script>
+        (function() {
+            var ua = window.navigator.userAgent;
+            if (ua.indexOf("Trident") > 0 || ua.indexOf("MSIE") > 0) {
+                var scriptElement = document.createElement("script");
+                scriptElement.src = "https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js";
+                document.head.appendChild(scriptElement);
+                scriptElement.addEventListener("load", function () {
+                    var scriptElement = document.createElement("script");
+                    scriptElement.src = "/app.js";
+                    document.head.appendChild(scriptElement);
+                })
+            } else {
+                var scriptElement = document.createElement("script");
+                scriptElement.src = "/app.js";
+                document.head.appendChild(scriptElement);
+            }
+        })()
+    </script>
 </head>
 
 <body>
@@ -59,9 +76,7 @@
                 2018 ハンターハンター 王位継承戦データベース No Rights Reserved.
             </div>
         </div>
-
     </div>
-    <script src="/app.js"></script>
 </body>
 
 </html>
