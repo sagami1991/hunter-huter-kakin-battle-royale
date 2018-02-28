@@ -33,8 +33,12 @@ module.exports = [
                         }
                     }
                 }
-            },
-            ]
+            }, {
+                test: /.svg$/,
+                use: {
+                    loader: "raw-loader"
+                }
+            }]
         },
         target: "web",
         externals: {
@@ -96,4 +100,5 @@ module.exports = [
                 from: path.join(__dirname, "src/static"),
             }])
         ]
-    }];
+    }
+];

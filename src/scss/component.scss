@@ -1,3 +1,10 @@
+button {
+    &:focus {
+        outline: 0;
+        border-color: #5a9acc;
+    }
+}
+
 @mixin commonHoverBg {
     &.hover,
     &:hover {
@@ -21,7 +28,7 @@
 .my-button-component {
     padding: 0;
     display: flex;
-    background-color: $baseWhite;
+    background-color: white;
     align-items: center;
     justify-content: center;
     @include commonHoverBg;

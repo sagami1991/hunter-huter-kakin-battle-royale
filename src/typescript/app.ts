@@ -11,6 +11,7 @@ interface IPage {
 
 class MainView {
     public init() {
+        this.appendInlineSvg();
         const pages: IPage[] = [
             {
                 path: ["", "all-prince"],
@@ -34,6 +35,12 @@ class MainView {
             }
         }
         this.setTitle("ページが見つかりません")
+    }
+
+    private appendInlineSvg() {
+        const svgText = require("./resource/iconset.svg") as string;
+        const svgContainer = document.querySelector(".svg-container")!;
+        svgContainer.innerHTML = svgText;
     }
 
     private renderContent(View: new () => BasePageView) {

@@ -21,9 +21,9 @@ export class AllPrinceView extends BasePageView {
         this._element = elementBuilder(`
         <div class="all-prince-view">
             <h2 class="content-h2">王子一覧</h2>
-            <div class="prince-list-container"></div>
+            <div class="prince-list-container list-view-container"></div>
             <h2 class="content-h2">王妃一覧</h2>
-            <div class="queen-list-container"></div>
+            <div class="queen-list-container list-view-container"></div>
         </div>
         `);
         const princes = Database.getAllPrince();

@@ -102,7 +102,8 @@ export function createModal(content: HTMLElement) {
         if (event.target === modalElement) {
             modalElement.remove();
         }
-    })
+    });
+    document.body.appendChild(modalElement);
 }
 
 export function sortMap<T>(map: Map<string, T>, sortOptions: Array<ISortOption<T>>) {
@@ -117,6 +118,19 @@ export function sortMap<T>(map: Map<string, T>, sortOptions: Array<ISortOption<T
         return 0;
     });
     return new Map(array);
+}
+
+/** 破壊メソッド */
+export function sortArray<T>(array: T[], sortOptions: Array<ISortOption<T>>) {
+    array.sort((a, b) => {
+        for (const sortOption of sortOptions) {
+            const aValue = sortOption.getSortValue(a);
+            const bValue = sortOption.getSortValue(b);
+            if (aValue < bValue) { return sortOption.order * -1; }
+            if (aValue > bValue) { return sortOption.order * 1; }
+        }
+        return 0;
+    });
 }
 
 /** yyyy年m月d日のみ */

@@ -1,6 +1,18 @@
 .list-view-table {
     background: white;
-    td.td-center {
+    .list-view-th-label-container {
+        display: flex;
+        align-items: center;
+        .icon-sort {
+            fill: gray;
+            margin-left: 4px;
+            cursor: pointer;
+            &.sort-active {
+                fill: #2196f3;
+            }
+        }
+    }
+    .td-center {
         text-align: center;
     }
     .td-image-and-text {

@@ -1,10 +1,11 @@
 
 .icon-svg {
+    display: block;
 	fill: currentColor;
 	&.icon-s {
-		width: 13px;
-		min-width: 13px;
-		height: 13px;
+		width: 16px;
+		min-width: 16px;
+		height: 16px;
 	}
 	&.icon-m {
 		width: 24px;

@@ -1,3 +1,4 @@
+@import "./const.scss";
 @import "./icon.scss";
 @import "./modal.scss";
 @import "./table.scss";
@@ -6,6 +7,11 @@
 @import "./component.scss";
 $mainYellow: #ffda45;
 $thinYellow: #ffea97;
+
+*, *:before {
+	box-sizing: border-box;
+}
+
 html {
     height: 100%;
 }

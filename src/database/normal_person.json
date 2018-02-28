@@ -90,7 +90,7 @@
     "33": {
         "name": "ビル",
         "belongId": "26",
-        "note": "",
+        "note": "協専ハンター。",
         "thumbnailImage": "ビル.jpg",
         "observerPrinceId": "14",
         "useNen": true,
@@ -99,7 +99,7 @@
     "34": {
         "name": "サイールド",
         "belongId": "26",
-        "note": "第12王子の霊獣に操られ、3人を殺害。死んではいないが強制退去済み",
+        "note": "協専ハンター。第12王子の霊獣に操られ、3人を殺害。死んではいないが強制退去済み",
         "thumbnailImage": "サイールド_thumbnail.jpg",
         "observerPrinceId": "14",
         "useNen": true,
@@ -109,7 +109,7 @@
     "35": {
         "name": "カートン",
         "belongId": "26",
-        "note": "死亡済",
+        "note": "協専ハンター。第12王子モモゼの霊獣により操られたサイールドにより殺害。念能力は船か車に変身可能",
         "thumbnailImage": "カートン_thumbnail.jpg",
         "observerPrinceId": "14",
         "useNen": true,
@@ -304,7 +304,7 @@
     "54": {
         "name": "テータ",
         "belongId": "4",
-        "note": "",
+        "note": "私設兵だがツェリードニヒに対する忠誠心は低い",
         "thumbnailImage": "テータ_thumbnail.jpg",
         "observerPrinceId": "4",
         "detailNen": "",
@@ -316,7 +316,7 @@
     "55": {
         "name": "サルコフ",
         "belongId": "4",
-        "note": "",
+        "note": "私設兵だがツェリードニヒに対する忠誠心は低い",
         "thumbnailImage": "サルコフ_thumbnail.jpg",
         "observerPrinceId": "4",
         "detailNen": "",

@@ -1,8 +1,10 @@
 import { BasePageView } from "./page";
 import { Database } from "../database";
 import { ListView } from "../component/listView";
-import { IPrince, INormalPerson, IPerson, IQueen } from "../interfaces";
-import { getThumbnailImage, sortMap, elementBuilder } from "../component/commonUtils";
+import { IPrince, INormalPerson, IQueen, ISortOption } from "../interfaces";
+import { getThumbnailImage, sortMap, elementBuilder, createModal } from "../component/commonUtils";
+import { Button } from "../component/button";
+import { ComponentScanner } from "../component/scanner";
 
 export class AllNormalPersonView extends BasePageView {
 
@@ -17,6 +19,9 @@ export class AllNormalPersonView extends BasePageView {
         return new Date(2018, 1, 27);
     }
 
+    private princes!: Map<string, IPrince>;
+    private queens!: Map<string, IQueen>;
+
     public render() {
         this._element = elementBuilder(`
         <div class="all-person-view">
@@ -28,38 +33,40 @@ export class AllNormalPersonView extends BasePageView {
                 <li>ハンター（協専）：ビヨンド（パリストン？）から雇われている。目的は暗黒大陸での任務を遂行すること。</li>
                 <li>ハンター（準協会員）：渡航中期間限定のハンター協会員。チードルが人材を募るために作った制度。念については教わっていない。警護を身内で固めるため、私設兵を準協会員にさせる王子が多い。</li>
                 <li>監視役：王妃所属兵または第一王子私設兵は、下位王妃の王子警護資格をもつ。下位王子を警護している人間は監視の役目。</li>
+                <li>念講習会：クラピカが主催する念講習会。平等に情報を与える事で王子同士のこう着状態を図るのが目的。</li>
             </ul>
-            <div class="person-list-container"></div>
+            <div class="person-list-container list-view-container"></div>
         </div>
         `);
-        const princes = Database.getAllPrince();
-        const queens = Database.getAllQueen();
+        this.princes = Database.getAllPrince();
+        this.queens = Database.getAllQueen();
         const persons = Database.getAllNormalPerson();
         const belongs = Database.getAllbelong();
+        const belongSort: ISortOption<INormalPerson> = {
+            getSortValue: (row: INormalPerson) => {
+                return row.belongId ? parseInt(row.belongId, 10) : Infinity;
+            },
+            order: 1,
+        };
+        const observerSort: ISortOption<INormalPerson> = {
+            getSortValue: (row: INormalPerson) => {
+                return row.observerPrinceId ? parseInt(row.observerPrinceId, 10) : Infinity;
+            },
+            order: 1,
+        };
         const listView = new ListView<INormalPerson>({
-            data: sortMap(persons, [{
-                getSortValue: (row) => {
-                    // const belong = belongs.get(row.belongId);
-                    return row.belongId ? parseInt(row.belongId, 10) : Infinity;
-                },
-                order: 1,
-            }, {
-                getSortValue: (row) => {
-                    return row.observerPrinceId ? parseInt(row.observerPrinceId, 10) : Infinity;
-                },
-                order: 1,
-            }
-            ]),
+            data: sortMap(persons, [belongSort, observerSort]),
             cellOptions: [
                 {
                     label: "画像", parse: (person) => {
-                        return getThumbnailImage(person.thumbnailImage, person.isDead ? "dead-image-cover" : "")
+                        return getThumbnailImage(person.thumbnailImage, person.isDead ? "dead-image-cover" : "");
                     }
                 },
                 { label: "名前", width: 80, parse: (person) => person.name },
                 {
                     label: "所属",
-                    width: 170,
+                    width: 190,
+                    sort: [belongSort, observerSort],
                     parse: (person) => {
                         const belong = belongs.get(person.belongId);
                         if (belong === undefined) {
@@ -67,45 +74,65 @@ export class AllNormalPersonView extends BasePageView {
                         }
                         if (belong.bossPersonId) {
                             let boss: IPrince | IQueen;
-                            const prince = princes.get(belong.bossPersonId);
+                            let bossType: "PRINCE" | "QUEEN";
+                            const prince = this.princes.get(belong.bossPersonId);
                             if (prince === undefined) {
-                                boss = queens.get(belong.bossPersonId)!;
+                                boss = this.queens.get(belong.bossPersonId)!;
+                                bossType = "QUEEN";
                             } else {
                                 boss = prince;
+                                bossType = "PRINCE";
                             }
+                            const button = this.createPopupBossButton(belong.bossPersonId, bossType);
                             return `<div class="td-image-and-text">`
                                 + getThumbnailImage(boss.thumbnailImage) + belong.name
-                                + `<span class="icon-common icon-information"></span>`
+                                + button.html()
                                 + `</div>`;
                         }
                         return belong ? belong.name : "不明";
                     }
                 },
                 {
-                    label: "警護先", width: 180, parse: (person) => {
-                        const prince = princes.get(person.observerPrinceId)!;
+                    label: "警護先",
+                    width: 210,
+                    sort: [observerSort, belongSort],
+                    parse: (person) => {
+                        const prince = this.princes.get(person.observerPrinceId)!;
+                        const button = this.createPopupBossButton(person.observerPrinceId, "PRINCE");
                         return `<div class="td-image-and-text">`
                             + getThumbnailImage(prince.thumbnailImage) + prince.name
-                            + `<span class="icon-common icon-information"></span>`
+                            + button.html()
                             + `</div>`;
                     }
                 },
                 {
                     label: "監視役",
-                    width: 50,
+                    width: 60,
                     isCenter: true,
+                    sort: [
+                        { getSortValue: (row) => row.isObserver ? 0 : 1, order: 1 },
+                        observerSort, belongSort
+                    ],
                     parse: (person) => person.isObserver ? `<span class="icon-common icon-spy"></span>` : ""
                 },
                 {
                     label: "念使用",
-                    width: 50,
+                    width: 60,
                     isCenter: true,
+                    sort: [
+                        { getSortValue: (row) => row.useNen ? 0 : 1, order: 1 },
+                        belongSort, observerSort
+                    ],
                     parse: (person) => person.useNen ? `<span class="icon-common icon-nen"></span>` : ""
                 },
                 {
                     label: "念講習会",
-                    width: 50,
+                    width: 60,
                     isCenter: true,
+                    sort: [
+                        { getSortValue: (row) => row.isAttendedTraining ? 0 : 1, order: 1 },
+                        belongSort, observerSort
+                    ],
                     parse: (person) => person.isAttendedTraining ? "出席" : ""
                 },
                 { label: "備考", width: 350, parse: (person) => person.note ? person.note : "" },
@@ -113,4 +140,63 @@ export class AllNormalPersonView extends BasePageView {
         });
         this._element.querySelector(".person-list-container")!.appendChild(listView.element);
     }
+
+
+    private createPopupBossButton(bossId: string, bossType: "PRINCE" | "QUEEN") {
+        return new Button({
+            icon: "icon-information",
+            style: "icon-only",
+            className: "person-popup-button",
+            onClick: () => {
+                const element = this.createPopupBossElement(bossId, bossType);
+                createModal(element);
+            }
+        });
+    }
+    private createPopupBossElement(bossId: string, bossType: "PRINCE" | "QUEEN"): HTMLElement {
+        if (bossType === "PRINCE") {
+            const prince = this.princes.get(bossId)!;
+            const mother = this.queens.get(prince.motherId)!;
+            const element = elementBuilder(`
+                <div>
+                <div class="popup-person-line" style="margin-bottom:20px">
+                    ${getThumbnailImage(prince.thumbnailImage)}${prince.name}
+                </div>
+                <div class="popup-person-line">
+                    母親:　${getThumbnailImage(mother.thumbnailImage)}
+                    ${mother.name}
+                </div>
+                <div>${mother.childrenId.map((childId) => {
+                    if (childId === bossId) {
+                        return "";
+                    }
+                    const brother = this.princes.get(childId)!;
+                    return `<div class="popup-person-line">
+                            兄弟:　${getThumbnailImage(brother.thumbnailImage)}
+                            ${brother.name}
+                        </div>`;
+                }).join("")}</div>
+                </div>
+            `);
+            return element;
+        } else if (bossType === "QUEEN") {
+            const queen = this.queens.get(bossId)!;
+            const children = queen.childrenId.map((childId) => this.princes.get(childId)!);
+            const element = elementBuilder(`<div>
+                <div class="popup-person-line" style="margin-bottom:20px">
+                    ${getThumbnailImage(queen.thumbnailImage)}${queen.name}
+                </div>
+                <div>${children.map((child) => {
+                    return `<div class="popup-person-line">
+                            子供:　${getThumbnailImage(child.thumbnailImage)}
+                            ${child.name}
+                        </div>`;
+                }).join("")}</div>
+            </div>`);
+            return element;
+        }
+        throw new Error();
+    }
+
+
 }

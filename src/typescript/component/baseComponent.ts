@@ -15,7 +15,6 @@ export abstract class BaseComponent<T extends IComponentGenerics = IComponentGen
     private _argClassName?: string;
     private _option: T["option"] | null;
     private _element?: T["element"];
-    private aa!: T;
     public get element() {
         return this._element;
     }

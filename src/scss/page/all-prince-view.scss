@@ -6,8 +6,17 @@
 
 }
 .td-image-and-text {
-    .icon-information {
+    .person-popup-button {
         margin-left: auto;
         margin-right: 10px;
+    }
+}
+
+.popup-person-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    .thumbail-container {
+        margin-right: 6px;
     }
 }

@@ -1,4 +1,4 @@
-import { BaseComponent, IComponentOption, IComponentGenerics } from "./baseComponent";
+import { BaseComponent, IComponentOption } from "./baseComponent";
 import { elementBuilder } from "./commonUtils";
 export class ComponentScanner {
     private static components: Map<number, {

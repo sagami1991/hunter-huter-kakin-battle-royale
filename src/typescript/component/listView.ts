@@ -1,10 +1,13 @@
-import { addDelegateEventListener, elementBuilder, TemplateUtil, getUuid } from "./commonUtils";
+import { addDelegateEventListener, elementBuilder, TemplateUtil, getUuid, getSvgIcon, sortArray } from "./commonUtils";
+import { ISortOption } from "../interfaces";
+import { ComponentScanner } from "./scanner";
 export interface ICellOption<T> {
     readonly label: string;
     readonly width?: number;
     readonly parse: (row: T) => string;
     readonly hover?: (row: T) => HTMLElement;
     readonly isCenter?: boolean;
+    readonly sort?: Array<ISortOption<T>>;
 }
 export interface IListOption<T> {
     readonly data?: T[] | Map<string, T>;
@@ -16,28 +19,27 @@ export class ListView<T> {
     private readonly cellOptions: Array<ICellOption<T>>;
     private readonly tBodyContainer: HTMLElement;
     private readonly uuid: string;
-    private tableDataRows: T[] = [];
+    private tableDataRows!: T[];
     constructor(option: IListOption<T>) {
         this.uuid = getUuid();
         this.cellOptions = option.cellOptions;
         this.element = elementBuilder(this.template());
         this.tBodyContainer = this.element.querySelector("tbody")!;
-        // addDelegateEventListener(this.element, "click", ".tbody-tr", (_event, tr) => {
-        //     tr.classList.toggle("highlight-row", true);
-        //     this.element.querySelectorAll("tr").forEach((trElem) => {
-        //         if (trElem !== tr) {
-        //             trElem.classList.remove("highlight-row");
-        //         }
-        //     });
-        // });
-        // addDelegateEventListener(this.element, "mouseover", ".list-view-table-td", (_event, td) => {
-        //     const columnIndex = td.getAttribute("column-index")!;
-        //     const hoverCallback = this.cellOptions[+columnIndex].hover;
-        //     if (hoverCallback) {
-        //         const rowIndex = td.getAttribute("row-index")!;
-        //         hoverCallback(this.tableDataRows[+rowIndex]);
-        //     }
-        // });
+        addDelegateEventListener(this.element, "click", ".list-view-table-th", (_event, th) => {
+            const columnIndex = +(th.getAttribute("attr-column-index")!);
+            const sortOption = this.cellOptions[columnIndex].sort;
+            if (sortOption === undefined) {
+                return;
+            }
+            sortArray(this.tableDataRows, sortOption);
+            this.refreshData(this.tableDataRows);
+            const activedSort = this.element.querySelector(".list-view-thead-tr .icon-sort.sort-active");
+            if (activedSort !== null) {
+                activedSort.classList.remove("sort-active");
+            }
+            th.querySelector(".icon-sort")!.classList.add("sort-active");
+        });
+
         if (option.data) {
             this.refreshData(option.data);
         }
@@ -46,19 +48,26 @@ export class ListView<T> {
 
     public refreshData(data: T[] | Map<string, T>) {
         this.tBodyContainer.innerHTML = this.bodyTemplate(data);
+        ComponentScanner.scan(this.tBodyContainer);
         if (data instanceof Array) {
             this.tableDataRows = data;
         } else {
             this.tableDataRows = Array.from(data.values());
         }
+
     }
     private template() {
         return `
         <table class="list-view-table list-view-table-${this.uuid}">
             <thead>
-                <tr>
-                    ${TemplateUtil.each(this.cellOptions, (cell) => "" +
-                `<th class="list-view-table-th">${cell.label}</th>`
+                <tr class="list-view-thead-tr">
+                    ${TemplateUtil.each(this.cellOptions, (cell, i) => "" +
+                `<th class="list-view-table-th" attr-column-index="${i}">
+                    <div class="list-view-th-label-container">
+                        ${cell.label}
+                        ${ cell.sort ? getSvgIcon("icon-sort", "s", "icon-sort") : ""}
+                    </div>
+                </th>`
             )}
                 </tr>
             </thead>
