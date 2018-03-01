@@ -49,19 +49,18 @@ class MainView {
         const tabElement =
             tabContainer.querySelector(`.main-tab[attr-page-name="${view.pageName}"]`) as HTMLElement;
         this.setTitle(view.title);
-        this.setMetadata(view.getUpdatedAt(), view.getPV())
+        this.setMetadata(view.getUpdatedAt());
         tabElement.classList.add("main-tab-active");
         view.render();
         contentElement.appendChild(view.element!);
         return;
     }
 
-    private setMetadata(updatedAt: Date, pv: number) {
+    private setMetadata(updatedAt: Date) {
         const metadataElement = document.querySelector(".content-meta-data") as HTMLElement;
         const updatedAtElement = metadataElement.querySelector(".updated-value") as HTMLElement;
-        // const pvElement = metadataElement.querySelector(".page-views-value") as HTMLElement;
+        updatedAtElement.setAttribute("datetime", updatedAt.toISOString());
         updatedAtElement.innerText = dateFormat(updatedAt);
-        // pvElement.innerText = "" + pv;
     }
 
     private setTitle(title: string) {
