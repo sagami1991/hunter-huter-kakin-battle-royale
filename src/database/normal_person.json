@@ -103,7 +103,7 @@
         "thumbnailImage": "サイールド_thumbnail.jpg",
         "observerPrinceId": "14",
         "useNen": true,
-        "isDead": false,
+        "isDead": true,
         "isArrested": true,
         "detailNen": "小さな虫を操る"
     },
@@ -163,7 +163,7 @@
     "40": {
         "name": "ビクト",
         "belongId": "1",
-        "note": "",
+        "note": "モモゼ殺害容疑として拘束中。",
         "thumbnailImage": "ビクト_thumbnail.jpg",
         "observerPrinceId": "12",
         "useNen": true,
@@ -173,7 +173,7 @@
     "41": {
         "name": "ニペイパー",
         "belongId": "16",
-        "note": "",
+        "note": "モモゼ殺害容疑として拘束中。",
         "thumbnailImage": "ニペイパー_thumbnail.jpg",
         "observerPrinceId": "12",
         "detailNen": "",
@@ -182,7 +182,7 @@
     "42": {
         "name": "ブラッヂ",
         "belongId": "17",
-        "note": "",
+        "note": "モモゼ殺害容疑として拘束中。調理免許を持っている。",
         "thumbnailImage": "ブラッヂ_thumbnail.jpg",
         "observerPrinceId": "12",
         "detailNen": "",
@@ -191,7 +191,7 @@
     "43": {
         "name": "ラロック",
         "belongId": "18",
-        "note": "",
+        "note": "モモゼ殺害容疑として拘束中。",
         "thumbnailImage": "ラロック_thumbnail.jpg",
         "observerPrinceId": "12",
         "detailNen": "",
@@ -211,7 +211,7 @@
     "45": {
         "name": "ナゴマム",
         "belongId": "20",
-        "note": "",
+        "note": "モモゼ殺害容疑として拘束中。",
         "thumbnailImage": "ナゴマム_thumbnail.jpg",
         "observerPrinceId": "12",
         "detailNen": "",
@@ -756,6 +756,90 @@
         "detailNen": "",
         "isDead": false,
         "useNen": false,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "92": {
+        "name": "ヴォルフ",
+        "belongId": "15",
+        "note": "カミーラにより銃殺される。",
+        "thumbnailImage": "ヴォルフ_thumbnail.jpg",
+        "observerPrinceId": "1",
+        "detailNen": "",
+        "isDead": true,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "93": {
+        "name": "マンダム",
+        "belongId": "16",
+        "note": "兵隊長。第1王妃所属兵と第2王妃所属兵は協力関係にあり、その調整役をしている。（35巻P120）",
+        "thumbnailImage": "マンダム_2queen_隊長_thumbnail.jpg",
+        "observerPrinceId": null,
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "94": {
+        "name": "不明",
+        "belongId": "4",
+        "note": "",
+        "thumbnailImage": "4_私設_thumbnail.jpg",
+        "observerPrinceId": "4",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "95": {
+        "name": "不明",
+        "belongId": "4",
+        "note": "",
+        "thumbnailImage": "4_私設2_thumbnail.jpg",
+        "observerPrinceId": "4",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "96": {
+        "name": "不明",
+        "belongId": "3",
+        "note": "",
+        "thumbnailImage": "チョウチョウ私設_thumbnail.jpg",
+        "observerPrinceId": "3",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": null,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "97": {
+        "name": "不明",
+        "belongId": "26",
+        "note": "",
+        "thumbnailImage": "7_ハンター.png",
+        "observerPrinceId": "7",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": true,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "98": {
+        "name": "不明",
+        "belongId": "26",
+        "note": "",
+        "thumbnailImage": "7_ハンター2.png",
+        "observerPrinceId": "7",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": true,
         "isObserver": false,
         "isAttendedTraining": false
     }
