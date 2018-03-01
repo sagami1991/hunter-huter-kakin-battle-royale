@@ -15,13 +15,13 @@ export function addDelegateEventListener(
     elem: Element, eventName: "click" | "mouseover",
     selector: string, cb: (event: Event, originalTarget: Element) => void) {
     elem.addEventListener(eventName, (event) => {
-        let target = event.target as Element;
+        let target: Element | null = event.target as Element;
         while (target && target !== event.currentTarget) {
             if (elementSelectorMatches(target, selector)) {
                 cb(event, target);
                 break;
             }
-            target = target.parentElement!;
+            target = target.parentElement;
         }
 
     });
@@ -149,7 +149,7 @@ export function dateFormat(date: Date) {
 }
 
 export type IconName = "icon-information" | "icon-sort";
-export type IconSize = "s" | "m";
+export type IconSize = "s" | "m" | "48";
 
 export function getSvgIcon(icon: IconName, size: IconSize = "m", className?: string): string {
     return `

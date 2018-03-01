@@ -5,15 +5,16 @@
             display: flex;
             align-items: center;
         }
-        &.sort-active {
-            .icon-sort {
-                fill: #2196f3;
-            }
-        }
-        .icon-sort {
-            fill: gray;
+        .sort-button {
             margin-left: 4px;
-            cursor: pointer;
+            &.sort-active {
+                .icon-svg {
+                    fill: #2196f3;
+                }
+            }
+            .icon-svg {
+                fill: gray;
+            }
         }
     }
     .td-center {

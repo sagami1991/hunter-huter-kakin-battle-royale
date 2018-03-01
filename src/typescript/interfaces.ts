@@ -4,6 +4,7 @@ export interface IPerson {
     thumbnailImage: string;
     useNen?: boolean;
     isDead?: boolean;
+    isArrested?: boolean;
     isAttendedTraining?: boolean;
 }
 export interface IPrince extends IPerson {

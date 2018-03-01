@@ -71,4 +71,5 @@ class MainView {
     }
 }
 
-new MainView().init();
+const mainView = new MainView();
+mainView.init();

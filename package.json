@@ -6,7 +6,8 @@
     "webpack": "webpack --watch",
     "webpack-production": "NODE_ENV=production webpack",
     "webpack-production-win": "set NODE_ENV=production&& webpack",
-    "lite-server": "lite-server --baseDir=dist"
+    "webpack-production-win-watch": "set NODE_ENV=production&& webpack --watch",
+    "http-server": "http-server ./dist -p 3000 -c-1"
   },
   "keywords": [],
   "author": "",

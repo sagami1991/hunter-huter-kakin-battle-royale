@@ -2,7 +2,7 @@ import { BasePageView } from "./page";
 import { Database } from "../database";
 import { ListView } from "../component/listView";
 import { IPrince, INormalPerson, IQueen, ISortOption } from "../interfaces";
-import { getThumbnailImage, sortMap, elementBuilder, createModal } from "../component/commonUtils";
+import { getThumbnailImage, sortMap, elementBuilder, createModal, getSvgIcon } from "../component/commonUtils";
 import { Button } from "../component/button";
 
 export class AllNormalPersonView extends BasePageView {
@@ -28,6 +28,7 @@ export class AllNormalPersonView extends BasePageView {
             <ul>
                 <li>私設兵：上位5人の私設兵は王子に対する士気も忠誠心も高い。</li>
                 <li>王妃所属兵：各王子の私設兵ほどには王子に対する帰属意識は強くないが王妃に対する忠誠は強い。</li>
+                <li>従事者：兵士と兼任する者も、非戦闘員もいる。</li>
                 <li>ハンター（クラピカ経由）：クラピカから雇われている。目的はクラピカと第4王子ツェリードニヒの接触を手助けすること。</li>
                 <li>ハンター（協専）：ビヨンド（パリストン？）から雇われている。目的は暗黒大陸での任務を遂行すること。</li>
                 <li>ハンター（準協会員）：渡航中期間限定のハンター協会員。チードルが人材を募るために作った制度。念については教わっていない。警護を身内で固めるため、私設兵を準協会員にさせる王子が多い。</li>
@@ -41,12 +42,24 @@ export class AllNormalPersonView extends BasePageView {
         this.queens = Database.getAllQueen();
         const persons = Database.getAllNormalPerson();
         const belongs = Database.getAllbelong();
-        const belongSort: ISortOption<INormalPerson> = {
+        const belongSort: Array<ISortOption<INormalPerson>> = [{
             getSortValue: (row: INormalPerson) => {
-                return row.belongId ? parseInt(row.belongId, 10) : Infinity;
+                const belong = belongs.get(row.belongId);
+                if (belong === undefined) {
+                    return Infinity;
+                }
+                if (!belong.bossPersonId) {
+                    return 99999;
+                }
+                return parseInt(belong.bossPersonId, 10);
             },
             order: 1,
-        };
+        }, {
+            getSortValue: (row: INormalPerson) => {
+                return parseInt(row.belongId, 10);
+            },
+            order: 1,
+        }];
         const observerSort: ISortOption<INormalPerson> = {
             getSortValue: (row: INormalPerson) => {
                 return row.observerPrinceId ? parseInt(row.observerPrinceId, 10) : Infinity;
@@ -54,7 +67,7 @@ export class AllNormalPersonView extends BasePageView {
             order: 1,
         };
         const listView = new ListView<INormalPerson>({
-            data: sortMap(persons, [belongSort, observerSort]),
+            data: sortMap(persons, [...belongSort, observerSort]),
             cellOptions: [
                 {
                     label: "画像", parse: (person) => {
@@ -65,7 +78,7 @@ export class AllNormalPersonView extends BasePageView {
                 {
                     label: "所属",
                     width: 190,
-                    sort: [belongSort, observerSort],
+                    sort: [...belongSort, observerSort],
                     parse: (person) => {
                         const belong = belongs.get(person.belongId);
                         if (belong === undefined) {
@@ -94,9 +107,12 @@ export class AllNormalPersonView extends BasePageView {
                 {
                     label: "警護先",
                     width: 210,
-                    sort: [observerSort, belongSort],
+                    sort: [observerSort, ...belongSort],
                     parse: (person) => {
-                        const prince = this.princes.get(person.observerPrinceId)!;
+                        const prince = this.princes.get(person.observerPrinceId);
+                        if (prince === undefined) {
+                            return "不明";
+                        }
                         const button = this.createPopupBossButton(person.observerPrinceId, "PRINCE");
                         return `<div class="td-image-and-text">`
                             + getThumbnailImage(prince.thumbnailImage) + prince.name
@@ -106,31 +122,31 @@ export class AllNormalPersonView extends BasePageView {
                 },
                 {
                     label: "監視役",
-                    width: 60,
+                    width: 70,
                     isCenter: true,
                     sort: [
                         { getSortValue: (row) => row.isObserver ? 0 : 1, order: 1 },
-                        observerSort, belongSort
+                        observerSort, ...belongSort
                     ],
                     parse: (person) => person.isObserver ? `<span class="icon-common icon-spy"></span>` : ""
                 },
                 {
                     label: "念使用",
-                    width: 60,
+                    width: 70,
                     isCenter: true,
                     sort: [
                         { getSortValue: (row) => row.useNen ? 0 : 1, order: 1 },
-                        belongSort, observerSort
+                        ...belongSort, observerSort
                     ],
                     parse: (person) => person.useNen ? `<span class="icon-common icon-nen"></span>` : ""
                 },
                 {
                     label: "念講習会",
-                    width: 60,
+                    width: 70,
                     isCenter: true,
                     sort: [
                         { getSortValue: (row) => row.isAttendedTraining ? 0 : 1, order: 1 },
-                        belongSort, observerSort
+                        ...belongSort, observerSort
                     ],
                     parse: (person) => person.isAttendedTraining ? "出席" : ""
                 },

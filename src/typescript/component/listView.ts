@@ -1,6 +1,7 @@
-import { addDelegateEventListener, elementBuilder, TemplateUtil, getUuid, getSvgIcon, sortArray } from "./commonUtils";
+import { elementBuilder, TemplateUtil, getUuid, getSvgIcon, sortArray } from "./commonUtils";
 import { ISortOption } from "../interfaces";
 import { ComponentScanner } from "./scanner";
+import { Button } from "./button";
 export interface ICellOption<T> {
     readonly label: string;
     readonly width?: number;
@@ -25,21 +26,7 @@ export class ListView<T> {
         this.cellOptions = option.cellOptions;
         this.element = elementBuilder(this.template());
         this.tBodyContainer = this.element.querySelector("tbody")!;
-        addDelegateEventListener(this.element, "click", ".list-view-table-th", (_event, th) => {
-            const columnIndex = +(th.getAttribute("attr-column-index")!);
-            const sortOption = this.cellOptions[columnIndex].sort;
-            if (sortOption === undefined) {
-                return;
-            }
-            sortArray(this.tableDataRows, sortOption);
-            this.refreshData(this.tableDataRows);
-            const activedSortTh = this.element.querySelector(".list-view-thead-tr .sort-active");
-            if (activedSortTh !== null) {
-                activedSortTh.classList.remove("sort-active");
-            }
-            th.classList.add("sort-active");
-        });
-
+        ComponentScanner.scan(this.element.querySelector("thead")!);
         if (option.data) {
             this.refreshData(option.data);
         }
@@ -65,7 +52,14 @@ export class ListView<T> {
                 `<th class="list-view-table-th" attr-column-index="${i}">
                     <div class="list-view-th-label-container">
                         ${cell.label}
-                        ${ cell.sort ? getSvgIcon("icon-sort", "s", "icon-sort") : ""}
+                        ${ cell.sort ? new Button({
+                            icon: "icon-sort",
+                            className: "sort-button",
+                            style: "icon-only",
+                            onClick: (button) => {
+                                this.sort(cell.sort!, button);
+                            }
+                        }).html() : ""}
                     </div>
                 </th>`
             )}
@@ -76,6 +70,16 @@ export class ListView<T> {
             <style></style>
         </table>
         `;
+    }
+
+    private sort(sortOption: Array<ISortOption<T>>, button: Button) {
+        sortArray(this.tableDataRows, sortOption);
+        this.refreshData(this.tableDataRows);
+        const activedSortButton = this.element.querySelector(".list-view-thead-tr .sort-active");
+        if (activedSortButton !== null) {
+            activedSortButton.classList.remove("sort-active");
+        }
+        button.element!.classList.add("sort-active");
     }
 
     private bodyTemplate(data: T[] | Map<string, T>) {

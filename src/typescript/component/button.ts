@@ -5,7 +5,7 @@ export interface IButtonOption extends IComponentOption {
     readonly icon: IconName;
     readonly iconSize?: IconSize;
     readonly style?: "icon-only" | "normal";
-    readonly onClick: () => void;
+    readonly onClick: (_this: Button) => void;
     readonly subLabel?: string;
 }
 
@@ -37,7 +37,7 @@ export class Button extends BaseComponent<IButtonGenerics> {
 
     /** @override */
     public initElem(elem: HTMLElement, option: IButtonOption) {
-        elem.addEventListener("click", () => option.onClick());
+        elem.addEventListener("click", () => option.onClick(this));
     }
 
     public toggleActive(toggel: boolean) {
