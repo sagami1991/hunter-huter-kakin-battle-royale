@@ -62,8 +62,8 @@ export class AllPrinceView extends BasePageView {
                             + `</div>`;
                     }
                 },
-                { label: "霊獣能力詳細", width: 350, parse: (prince) => prince.nenBeastNote },
-                { label: "固有念能力詳細", width: 350, parse: (prince) => prince.nenNote || "" },
+                { label: "霊獣能力", width: 350, parse: (prince) => prince.nenBeastNote },
+                { label: "固有念能力", width: 350, parse: (prince) => prince.nenNote || "" },
             ],
         });
 
