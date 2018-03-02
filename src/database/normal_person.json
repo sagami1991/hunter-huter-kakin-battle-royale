@@ -32,7 +32,7 @@
     "26": {
         "name": "チャラ男（仮）",
         "belong": "ハンター",
-        "belongId": "26",
+        "belongId": "25",
         "thumbnailImage": "チャラ_thumbnail.jpg",
         "note": "イズナビのことをイズさんと呼ぶ",
         "observerPrinceId": "6",
@@ -40,40 +40,40 @@
     },
     "27": {
         "name": "イズナビ",
-        "belongId": "26",
+        "belongId": "24",
         "thumbnailImage": "イズナビ.png",
-        "note": "クラピカ経由での任務。クラピカの師匠",
+        "note": "クラピカの師匠",
         "observerPrinceId": "6",
         "useNen": true
     },
     "28": {
         "name": "バショウ",
-        "belongId": "26",
-        "note": "クラピカ経由での任務。クラピカとはノストラード組繋がり",
+        "belongId": "24",
+        "note": "クラピカとはノストラード組繋がり",
         "thumbnailImage": "バショウ.png",
         "observerPrinceId": "7",
         "useNen": true
     },
     "29": {
         "name": "センリツ",
-        "belongId": "26",
-        "note": "クラピカ経由での任務。クラピカとはノストラード組繋がり",
+        "belongId": "24",
+        "note": "クラピカとはノストラード組繋がり",
         "thumbnailImage": "センリツ.png",
         "observerPrinceId": "10",
         "useNen": true
     },
     "30": {
         "name": "ビスケ",
-        "belongId": "26",
-        "note": "クラピカ経由での任務。クラピカとはキルア紹介での繋がり",
+        "belongId": "24",
+        "note": "クラピカとはキルア紹介での繋がり",
         "thumbnailImage": "ビスケ.png",
         "observerPrinceId": "13",
         "useNen": true
     },
     "31": {
         "name": "ハンゾー",
-        "belongId": "26",
-        "note": "クラピカ経由での任務。クラピカとは同期繋がり。第7王妃セヴァンチの命令により、第13王子に警護に移動。",
+        "belongId": "24",
+        "note": "クラピカとは同期繋がり。第7王妃セヴァンチの命令により、第13王子に警護に移動。",
         "thumbnailImage": "ハンゾー.png",
         "observerPrinceId": "12",
         "useNen": true
@@ -89,8 +89,8 @@
     },
     "33": {
         "name": "ビル",
-        "belongId": "26",
-        "note": "協専ハンター。",
+        "belongId": "25",
+        "note": "",
         "thumbnailImage": "ビル.jpg",
         "observerPrinceId": "14",
         "useNen": true,
@@ -98,8 +98,8 @@
     },
     "34": {
         "name": "サイールド",
-        "belongId": "26",
-        "note": "協専ハンター。第12王子の霊獣に操られ、3人を殺害。死んではいないが強制退去済み",
+        "belongId": "25",
+        "note": "第12王子の霊獣に操られ、3人を殺害。死んではいないが強制退去済み",
         "thumbnailImage": "サイールド_thumbnail.jpg",
         "observerPrinceId": "14",
         "useNen": true,
@@ -109,8 +109,8 @@
     },
     "35": {
         "name": "カートン",
-        "belongId": "26",
-        "note": "協専ハンター。第12王子モモゼの霊獣により操られたサイールドにより殺害。念能力は船か車に変身可能",
+        "belongId": "25",
+        "note": "第12王子モモゼの霊獣により操られたサイールドにより殺害。念能力は船か車に変身可能",
         "thumbnailImage": "カートン_thumbnail.jpg",
         "observerPrinceId": "14",
         "useNen": true,
@@ -237,7 +237,7 @@
     },
     "48": {
         "name": "クラピカ",
-        "belongId": "26",
+        "belongId": "24",
         "note": "",
         "thumbnailImage": "クラピカ_thumbnail.jpg",
         "observerPrinceId": "14",
@@ -329,7 +329,7 @@
     },
     "56": {
         "name": "ベレレインテ",
-        "belongId": "26",
+        "belongId": "25",
         "note": "",
         "thumbnailImage": "ベレレインテ_thumbnail.jpg",
         "observerPrinceId": "13",
@@ -821,7 +821,7 @@
     },
     "97": {
         "name": "不明",
-        "belongId": "26",
+        "belongId": "25",
         "note": "",
         "thumbnailImage": "7_ハンター.png",
         "observerPrinceId": "7",
@@ -833,7 +833,7 @@
     },
     "98": {
         "name": "不明",
-        "belongId": "26",
+        "belongId": "25",
         "note": "",
         "thumbnailImage": "7_ハンター2.png",
         "observerPrinceId": "7",

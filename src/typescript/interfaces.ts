@@ -9,11 +9,11 @@ export interface IPerson {
 }
 export interface IPrince extends IPerson {
     motherId: string;
-    // mother: undefined | IQueen; // DB上は定義していない
+    nenBeastNote: string;
+    nenNote?: string;
 }
 
 export interface IQueen extends IPerson {
-    // children: undefined | IPrince[]; // DB上は定義していない
     childrenId: string[];
 }
 
@@ -29,10 +29,11 @@ export interface INormalPerson extends IPerson {
 export interface IBelong {
     bossPersonId: string;
     name: string;
+    thumbnailImage?: string;
 }
 
 export interface ISortOption<T> {
-    getSortValue: (row: T) => string | number;
+    getSortValue: (row: T, key?: string) => string | number;
     /** 1昇順　-1降順 */
     order: 1 | -1;
 }

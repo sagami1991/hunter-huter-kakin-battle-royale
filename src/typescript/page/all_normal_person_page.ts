@@ -15,7 +15,7 @@ export class AllNormalPersonView extends BasePageView {
         return "警護人一覧";
     }
     public getUpdatedAt() {
-        return new Date(2018, 2, 1);
+        return new Date(2018, 2, 2);
     }
 
     private princes!: Map<string, IPrince>;
@@ -101,7 +101,13 @@ export class AllNormalPersonView extends BasePageView {
                                 + button.html()
                                 + `</div>`;
                         }
-                        return belong ? belong.name : "不明";
+
+                        if (belong.thumbnailImage) {
+                            return `<div class="td-image-and-text">`
+                                + getThumbnailImage(belong.thumbnailImage) + belong.name
+                                + `</div>`;
+                        }
+                        return belong.name;
                     }
                 },
                 {

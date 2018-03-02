@@ -5,9 +5,9 @@
         "thumbnailImage": "ベンジャミン.png",
         "motherId": "15",
         "skillName": "星を継ぐもの（ベンジャミンバトン）",
-        "skillDetail": "",
+        "nenNote": "「星を継ぐもの（ベンジャミンバトン）」。ベンジャミンに忠誠を誓ったベンジャミンの私設兵が死ぬと、その能力を継承できる。",
         "nenBeastName": "",
-        "nenBeastOverview": "？",
+        "nenBeastNote": "不明",
         "nenBeastImage": ""
     },
     "2": {
@@ -15,10 +15,10 @@
         "name": "第2王子 カミーラ",
         "thumbnailImage": "カミーラ.png",
         "skillName": "百万回生きた猫（ネコノナマエ）",
-        "skillDetail": "",
+        "nenNote": "「百万回生きた猫（ネコノナマエ）」。カウンター型。カミーラの死によって発動し、自分を攻撃してきた者を殺し、カミーラを生き返らせる。",
         "motherId": "16",
         "nenBeastName": "",
-        "nenBeastOverview": "操作系、強制型。ある条件を満たしたものを意のままに操る",
+        "nenBeastNote": "操作系、強制型。ある条件を満たしたものを意のままに操る",
         "nenBeastImage": "？"
     },
     "3": {
@@ -27,7 +27,7 @@
         "thumbnailImage": "チョウライ.png",
         "motherId": "17",
         "nenBeastName": "",
-        "nenBeastOverview": "？",
+        "nenBeastNote": "具現化系、複合型。コインを具現化し、コインの所有者が条件を満たす事で様々な能力が発現する",
         "nenBeastImage": ""
     },
     "4": {
@@ -36,7 +36,7 @@
         "thumbnailImage": "ツェリードニヒ.jpg",
         "motherId": "15",
         "nenBeastName": "",
-        "nenBeastOverview": "？",
+        "nenBeastNote": "不明",
         "nenBeastImage": ""
     },
     "5": {
@@ -45,7 +45,7 @@
         "thumbnailImage": "TsubeppaAv.jpg",
         "motherId": "16",
         "nenBeastName": "",
-        "nenBeastOverview": "変化系の能力。発動には共同研究者（パートナー）が必要となる共存型。守護霊獣の体内で様々な効果を持つ薬品を生成することができる。",
+        "nenBeastNote": "変化系。守護霊獣の体内で様々な効果を持つ薬品を生成することができる。",
         "nenBeastImage": ""
     },
     "6": {
@@ -54,7 +54,7 @@
         "thumbnailImage": "TysonAv.jpg",
         "motherId": "18",
         "nenBeastName": "",
-        "nenBeastOverview": "放出系で拡散・徴集型の能力。「タイソン教典」を受け取った者に目玉ジャクシが憑く。目玉ジャクシは宿主からオーラを徴集し替わりに幸福を与える。この幸福度は「タイソン教典」の熟読度によって変化。ただし、教典唯一の禁忌を破ると厳しい罰が下る。",
+        "nenBeastNote": "放出系、拡散・徴集型。「タイソン教典」を受け取った者に目玉ジャクシが憑く。目玉ジャクシは宿主からオーラを徴集し替わりに幸福を与える。この幸福度は「タイソン教典」の熟読度によって変化。ただし、<b>教典唯一の禁忌を破ると厳しい罰が下る。</b>",
         "nenBeastImage": ""
     },
     "7": {
@@ -63,7 +63,7 @@
         "thumbnailImage": "ルズールス.png",
         "motherId": "16",
         "nenBeastName": "",
-        "nenBeastOverview": "具現化系 半強制型の操作能力 標的の欲望を具現化し罠を張る。標的が罠にはまる（欲望を満たす）事で発動する",
+        "nenBeastNote": "具現化系、半強制型。標的の欲望を具現化し罠を張る。標的が罠にはまる（欲望を満たす）事で発動する。",
         "nenBeastImage": ""
     },
     "8": {
@@ -72,7 +72,7 @@
         "thumbnailImage": "サレサレ_thumbnail.png",
         "motherId": "19",
         "nenBeastName": "",
-        "nenBeastOverview": "拡散系の操作能力 強制力は弱いが多くの人間を操ることが可能。守護霊獣から出ている白い煙を吸い込むほど王子への行為が増す。一定の煙を吸い込み続けた人物の頭上に守護霊獣の分身が発生する。その人物がまた別の誰かと接触し煙を吸うことで王子への好意を伝染させる事が可能",
+        "nenBeastNote": "操作系、拡散型。守護霊獣から出ている白い煙を吸い込むほど王子への好意が増す。一定の煙を吸い込み続けた人物の頭上に守護霊獣の分身が発生する。その人物がまた別の誰かと接触し煙を吸うことで王子への好意を伝染させる事が可能",
         "nenBeastImage": ""
     },
     "9": {
@@ -81,7 +81,7 @@
         "thumbnailImage": "ハルケンブルグ_thumbnail.png",
         "motherId": "16",
         "nenBeastName": "",
-        "nenBeastOverview": "強化系 相互協力型の能力。羽の刻印を持つ者が王子の元に多く集まるほど個々のポテンシャルを高め合う。その集団が互いに意志を統一し能力を発動した時の威力はあらゆる念能力の中でも最大級となる。ハルケンブルグ王子への忠誠心がない者には刻印は消える。",
+        "nenBeastNote": "強化系、相互協力型。羽の刻印を持つ者が王子の元に多く集まるほど個々のポテンシャルを高め合う。その集団が互いに意志を統一し能力を発動した時の威力は<b>あらゆる念能力の中でも最大級</b>となる。ハルケンブルグ王子への忠誠心がない者には刻印は消える。",
         "nenBeastImage": ""
     },
     "10": {
@@ -90,7 +90,7 @@
         "thumbnailImage": "KachouAv.jpg",
         "motherId": "20",
         "nenBeastName": "",
-        "nenBeastOverview": "？",
+        "nenBeastNote": "不明",
         "nenBeastImage": ""
     },
     "11": {
@@ -99,7 +99,7 @@
         "thumbnailImage": "FuugetsuAv.jpg",
         "motherId": "20",
         "nenBeastName": "",
-        "nenBeastOverview": "？",
+        "nenBeastNote": "別の場所に移動できるトンネル「魔法の抜け道（マジックワーム）」を具現化できる。一日一回使用可能。",
         "nenBeastImage": ""
     },
     "12": {
@@ -108,7 +108,7 @@
         "thumbnailImage": "モモゼ.png",
         "motherId": "21",
         "nenBeastName": "",
-        "nenBeastOverview": "操作系 半強制型の能力",
+        "nenBeastNote": "操作系、半強制型。「おヒマ？」と質問し「ヒマ」と答えると操られる。",
         "nenBeastImage": "",
         "isDead": true,
         "note": "第7王妃セヴァンチの命令により、警護が第13王子に回された。警護は6人のみ。"
@@ -119,7 +119,7 @@
         "thumbnailImage": "MarayaamAv.jpg",
         "motherId": "21",
         "nenBeastName": "",
-        "nenBeastOverview": "？",
+        "nenBeastNote": "王子の部屋ごと別空間に隔離する。別空間から現実世界は一方通行になっている。",
         "nenBeastImage": ""
     },
     "14": {
@@ -128,7 +128,7 @@
         "thumbnailImage": "ワブル.png",
         "motherId": "22",
         "nenBeastName": "",
-        "nenBeastOverview": "？",
+        "nenBeastNote": "不明",
         "nenBeastImage": ""
     }
 }

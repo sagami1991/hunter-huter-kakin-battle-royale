@@ -116,12 +116,13 @@ export function createModal(content: HTMLElement) {
     document.body.appendChild(modalElement);
 }
 
+/** 非破壊メソッド */
 export function sortMap<T>(map: Map<string, T>, sortOptions: Array<ISortOption<T>>) {
     const array = Array.from(map.entries());
     array.sort(([aKey, aVal], [bKey, bVal]) => {
         for (const sortOption of sortOptions) {
-            const aValue = sortOption.getSortValue(aVal);
-            const bValue = sortOption.getSortValue(bVal);
+            const aValue = sortOption.getSortValue(aVal, aKey);
+            const bValue = sortOption.getSortValue(bVal, bKey);
             if (aValue < bValue) { return sortOption.order * -1; }
             if (aValue > bValue) { return sortOption.order * 1; }
         }

@@ -1,4 +1,4 @@
-import { elementBuilder, TemplateUtil, getUuid, getSvgIcon, sortArray } from "./commonUtils";
+import { elementBuilder, TemplateUtil, getUuid, getSvgIcon, sortArray, sortMap } from "./commonUtils";
 import { ISortOption } from "../interfaces";
 import { ComponentScanner } from "./scanner";
 import { Button } from "./button";
@@ -20,7 +20,7 @@ export class ListView<T> {
     private readonly cellOptions: Array<ICellOption<T>>;
     private readonly tBodyContainer: HTMLElement;
     private readonly uuid: string;
-    private tableDataRows!: T[];
+    private tableDataRows!: T[] | Map<string, T>;
     constructor(option: IListOption<T>) {
         this.uuid = getUuid();
         this.cellOptions = option.cellOptions;
@@ -36,11 +36,7 @@ export class ListView<T> {
     public refreshData(data: T[] | Map<string, T>) {
         this.tBodyContainer.innerHTML = this.bodyTemplate(data);
         ComponentScanner.scan(this.tBodyContainer);
-        if (data instanceof Array) {
-            this.tableDataRows = data;
-        } else {
-            this.tableDataRows = Array.from(data.values());
-        }
+        this.tableDataRows = data;
 
     }
     private template() {
@@ -73,7 +69,11 @@ export class ListView<T> {
     }
 
     private sort(sortOption: Array<ISortOption<T>>, button: Button) {
-        sortArray(this.tableDataRows, sortOption);
+        if (this.tableDataRows instanceof Array) {
+            sortArray(this.tableDataRows, sortOption);
+        } else {
+            this.tableDataRows = sortMap(this.tableDataRows, sortOption);
+        }
         this.refreshData(this.tableDataRows);
         const activedSortButton = this.element.querySelector(".list-view-thead-tr .sort-active");
         if (activedSortButton !== null) {
