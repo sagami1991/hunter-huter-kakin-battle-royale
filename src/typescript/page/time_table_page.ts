@@ -14,7 +14,7 @@ export class TimeTableView extends BasePageView {
         return "タイムテーブル";
     }
     public getUpdatedAt() {
-        return new Date(2018, 1, 27);
+        return new Date(2018, 2, 2);
     }
 
     public render() {
@@ -29,6 +29,9 @@ export class TimeTableView extends BasePageView {
             <li>2日目9時: 第14王子の部屋で念講習会開始</li>
             <li>2日目10時: 第14王子の部屋でサイレントマジョリティによる被害者が出るが続行</li>
             <li>出航後37.5時間: クラピカとヴォルゲーが電話で会話</li>
+            <li>3日目1時27分: フウゲツ、初めて「魔法の抜け道（マジックワーム）」を具現化し、カチョウの部屋まで行く。</li>
+            <li>3日目10時: ミュハン、サイレントマジョリティにより殺される。</li>
+            <li>4日目0時: フウゲツ、自信の霊獣について考察。</li>
             </div>
         `);
     }

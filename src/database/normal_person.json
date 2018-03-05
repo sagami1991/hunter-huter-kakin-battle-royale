@@ -402,11 +402,11 @@
     "62": {
         "name": "ミュハン",
         "belongId": "4",
-        "note": "講習会でクラピカに喧嘩を売る。暗殺者の心の声とヒュリコフ洞察の消去法から念能力ではない",
+        "note": "講習会でクラピカに喧嘩を売る。4日目10時、サイレントマジョリティにより殺される。",
         "thumbnailImage": "ミュハン_thumbnail.jpg",
         "observerPrinceId": "4",
         "detailNen": "",
-        "isDead": false,
+        "isDead": true,
         "useNen": false,
         "isObserver": false,
         "isAttendedTraining": true
@@ -608,7 +608,7 @@
         "belongId": "1",
         "note": "",
         "thumbnailImage": "不明1_2_thumbnail.jpg",
-        "observerPrinceId": null,
+        "observerPrinceId": "10",
         "detailNen": "",
         "isDead": false,
         "useNen": true,
@@ -840,6 +840,18 @@
         "detailNen": "",
         "isDead": false,
         "useNen": true,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "99": {
+        "name": "不明",
+        "belongId": "4",
+        "note": "",
+        "thumbnailImage": "4_homo_thumbnail.jpg",
+        "observerPrinceId": "4",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": false,
         "isObserver": false,
         "isAttendedTraining": false
     }
