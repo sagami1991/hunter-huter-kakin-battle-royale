@@ -330,7 +330,7 @@
     "56": {
         "name": "ベレレインテ",
         "belongId": "25",
-        "note": "",
+        "note": "念講習会で、クラピカが暗殺者の疑いをかけられたところを助ける。",
         "thumbnailImage": "ベレレインテ_thumbnail.jpg",
         "observerPrinceId": "13",
         "detailNen": "",
@@ -849,6 +849,18 @@
         "note": "",
         "thumbnailImage": "4_homo_thumbnail.jpg",
         "observerPrinceId": "4",
+        "detailNen": "",
+        "isDead": false,
+        "useNen": false,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "100": {
+        "name": "不明",
+        "belongId": "2",
+        "note": "裁判に出席していたのでおそらく兵隊長。クラピカの考察によれば、第2王子私設兵は念能力が使える可能性が高い。",
+        "thumbnailImage": "第2_thumbnail.jpg",
+        "observerPrinceId": "2",
         "detailNen": "",
         "isDead": false,
         "useNen": false,
