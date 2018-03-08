@@ -12,6 +12,8 @@ export interface IPrince extends IPerson {
     motherId: string;
     nenBeastNote: string;
     nenNote?: string;
+    nenBeastThumbnailImage: string | null;
+    nenBeastImage: string | null;
 }
 
 export interface IQueen extends IPerson {

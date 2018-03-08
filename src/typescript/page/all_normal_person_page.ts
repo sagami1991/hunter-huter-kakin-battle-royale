@@ -168,9 +168,9 @@ export class AllNormalPersonView extends BasePageView {
             icon: "icon-information",
             style: "icon-only",
             className: "person-popup-button",
-            onClick: () => {
+            onClick: (button) => {
                 const element = this.createPopupBossElement(bossId, bossType);
-                createModal(element);
+                createModal(element, button.element!);
             }
         });
     }

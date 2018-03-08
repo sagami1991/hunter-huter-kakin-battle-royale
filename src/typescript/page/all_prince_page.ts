@@ -3,6 +3,7 @@ import { Database } from "../database";
 import { ListView } from "../component/listView";
 import { IPrince, IQueen, ISortOption, INormalPerson } from "../interfaces";
 import { getThumbnailImage, elementBuilder } from "../component/commonUtils";
+import { ThumbnailComponent } from "../component/thumbnailImage";
 
 export class AllPrinceView extends BasePageView {
 
@@ -62,7 +63,14 @@ export class AllPrinceView extends BasePageView {
                             + `</div>`;
                     }
                 },
-                { label: "霊獣能力", width: 350, parse: (prince) => prince.nenBeastNote },
+                { label: "霊獣能力", width: 400, parse: (prince) => {
+                    return `<div class="td-image-and-text">`
+                            + ( prince.nenBeastImage ? new ThumbnailComponent({
+                                thumbnailImage: `/character/${prince.nenBeastThumbnailImage}`,
+                                mediumImage: `/character/${prince.nenBeastImage}`,
+                            }).html() : "")
+                            + `<div>${prince.nenBeastNote}</div>`
+                            + `</div>`; }},
                 { label: "固有念能力", width: 350, parse: (prince) => prince.nenNote || "" },
                 { label: "備考", width: 350, parse: (prince) => prince.note || "" },
             ],

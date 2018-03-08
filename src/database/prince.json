@@ -5,21 +5,23 @@
         "thumbnailImage": "ベンジャミン.png",
         "motherId": "15",
         "skillName": "星を継ぐもの（ベンジャミンバトン）",
-        "nenNote": "「星を継ぐもの（ベンジャミンバトン）」。ベンジャミンに忠誠を誓ったベンジャミンの私設兵が死ぬと、その能力を継承できる。",
+        "nenNote": "「星を継ぐもの（ベンジャミンバトン）」。ベンジャミンに忠誠を誓ったベンジャミンの私設兵が死ぬと、その能力を継承できる。(373話)",
         "nenBeastName": "",
         "nenBeastNote": "不明",
-        "nenBeastImage": ""
+        "nenBeastThumbnailImage": "beast1_thumbnail.jpg",
+        "nenBeastImage": "beast1_jpg.jpg"
     },
     "2": {
         "id": 2,
         "name": "第2王子 カミーラ",
         "thumbnailImage": "カミーラ.png",
         "skillName": "百万回生きた猫（ネコノナマエ）",
-        "nenNote": "「百万回生きた猫（ネコノナマエ）」。カウンター型。カミーラの死によって発動し、自分を攻撃してきた者を殺し、カミーラを生き返らせる。",
+        "nenNote": "「百万回生きた猫（ネコノナマエ）」。カウンター型。カミーラの死によって発動し、自分を攻撃してきた者を殺し、カミーラを生き返らせる。(373話)",
         "motherId": "16",
         "nenBeastName": "",
-        "nenBeastNote": "操作系、強制型。ある条件を満たしたものを意のままに操る",
-        "nenBeastImage": "？"
+        "nenBeastNote": "操作系、強制型。ある条件を満たしたものを意のままに操る(375話)",
+        "nenBeastThumbnailImage": "beast2_thumbnail.jpg",
+        "nenBeastImage": "beast2_jpg.jpg"
     },
     "3": {
         "id": 3,
@@ -27,8 +29,9 @@
         "thumbnailImage": "チョウライ.png",
         "motherId": "17",
         "nenBeastName": "",
-        "nenBeastNote": "具現化系、複合型。コインを具現化し、コインの所有者が条件を満たす事で様々な能力が発現する",
-        "nenBeastImage": "",
+        "nenBeastNote": "具現化系、複合型。コインを具現化し、コインの所有者が条件を満たす事で様々な能力が発現する(376話)",
+        "nenBeastThumbnailImage": "beast3_thumbnail.jpg",
+        "nenBeastImage": "beast3_jpg.jpg",
         "note": "カキン王国3大マフィア「シュウ＝ウ一家」とパイプがある。「シュウ＝ウ一家」はBW号4層（一般渡航者区域）を仕切っている(377話)"
     },
     "4": {
@@ -38,7 +41,8 @@
         "motherId": "15",
         "nenBeastName": "",
         "nenBeastNote": "不明",
-        "nenBeastImage": "",
+        "nenBeastThumbnailImage": "beast4_thumbnail.jpg",
+        "nenBeastImage": "beast4_jpg.jpg",
         "note": "カキン王国3大マフィア「エイ＝イ一家」とパイプがある。「エイ＝イ一家」はBW号3層（一般渡航者区域）を仕切っている(377話)"
     },
     "5": {
@@ -47,8 +51,9 @@
         "thumbnailImage": "TsubeppaAv.jpg",
         "motherId": "16",
         "nenBeastName": "",
-        "nenBeastNote": "変化系。守護霊獣の体内で様々な効果を持つ薬品を生成することができる。",
-        "nenBeastImage": ""
+        "nenBeastNote": "変化系。守護霊獣の体内で様々な効果を持つ薬品を生成することができる。(375話)",
+        "nenBeastThumbnailImage": "beast5_thumbnail.jpg",
+        "nenBeastImage": "beast5_jpg.jpg"
     },
     "6": {
         "id": 6,
@@ -56,8 +61,9 @@
         "thumbnailImage": "TysonAv.jpg",
         "motherId": "18",
         "nenBeastName": "",
-        "nenBeastNote": "放出系、拡散・徴集型。「タイソン教典」を受け取った者に目玉ジャクシが憑く。目玉ジャクシは宿主からオーラを徴集し替わりに幸福を与える。この幸福度は「タイソン教典」の熟読度によって変化。ただし、<b>教典唯一の禁忌を破ると厳しい罰が下る。</b>",
-        "nenBeastImage": ""
+        "nenBeastNote": "放出系、拡散・徴集型。「タイソン教典」を受け取った者に目玉ジャクシが憑く。目玉ジャクシは宿主からオーラを徴集し替わりに幸福を与える。この幸福度は「タイソン教典」の熟読度によって変化。ただし、<b>教典唯一の禁忌を破ると厳しい罰が下る。</b>(375話)",
+        "nenBeastThumbnailImage": "beast6_thumbnail.jpg",
+        "nenBeastImage": "beast6_jpg.jpg"
     },
     "7": {
         "id": 7,
@@ -65,8 +71,9 @@
         "thumbnailImage": "ルズールス.png",
         "motherId": "16",
         "nenBeastName": "",
-        "nenBeastNote": "具現化系、半強制型。標的の欲望を具現化し罠を張る。標的が罠にはまる（欲望を満たす）事で発動する。",
-        "nenBeastImage": "",
+        "nenBeastNote": "具現化系、半強制型。標的の欲望を具現化し罠を張る。標的が罠にはまる（欲望を満たす）事で発動する。(375話)",
+        "nenBeastThumbnailImage": "beast7_thumbnail.jpg",
+        "nenBeastImage": "beast7_jpg.jpg",
         "note": "カキン王国3大マフィア「シャ＝ア一家」とパイプがある。「シャ＝ア一家」はBW号5層（一般渡航者区域）を仕切っている。(377話)"
     },
     "8": {
@@ -76,7 +83,8 @@
         "motherId": "19",
         "nenBeastName": "",
         "nenBeastNote": "操作系、拡散型。守護霊獣から出ている白い煙を吸い込むほど王子への好意が増す。一定の煙を吸い込み続けた人物の頭上に守護霊獣の分身が発生する。その人物がまた別の誰かと接触し煙を吸うことで王子への好意を伝染させる事が可能",
-        "nenBeastImage": ""
+        "nenBeastThumbnailImage": "beast8_thumbnail.jpg",
+        "nenBeastImage": "beast8_jpg.jpg"
     },
     "9": {
         "id": 9,
@@ -84,8 +92,10 @@
         "thumbnailImage": "ハルケンブルグ_thumbnail.png",
         "motherId": "16",
         "nenBeastName": "",
-        "nenBeastNote": "強化系、相互協力型。羽の刻印を持つ者が王子の元に多く集まるほど個々のポテンシャルを高め合う。その集団が互いに意志を統一し能力を発動した時の威力は<b>あらゆる念能力の中でも最大級</b>となる。ハルケンブルグ王子への忠誠心がない者には刻印は消える。",
-        "nenBeastImage": ""
+        "nenBeastNote": "強化系、相互協力型。羽の刻印を持つ者が王子の元に多く集まるほど個々のポテンシャルを高め合う。その集団が互いに意志を統一し能力を発動した時の威力は<b>あらゆる念能力の中でも最大級</b>となる。ハルケンブルグ王子への忠誠心がない者には刻印は消える。(375話)",
+        "nenBeastThumbnailImage": "beast9_thumbnail.jpg",
+        "nenBeastImage": "beast9_jpg.jpg",
+        "note": "「王子の中で唯一認めるのは第4王子ツェリードニヒだけ」と過去に発言あり。（350話）"
     },
     "10": {
         "id": 10,
@@ -94,7 +104,7 @@
         "motherId": "20",
         "nenBeastName": "",
         "nenBeastNote": "不明",
-        "nenBeastImage": ""
+        "nenBeastImage": null
     },
     "11": {
         "id": 11,
@@ -102,8 +112,8 @@
         "thumbnailImage": "FuugetsuAv.jpg",
         "motherId": "20",
         "nenBeastName": "",
-        "nenBeastNote": "別の場所に移動できるトンネル「魔法の抜け道（マジックワーム）」を具現化できる。一日一回使用可能。",
-        "nenBeastImage": ""
+        "nenBeastNote": "別の場所に移動できるトンネル「魔法の抜け道（マジックワーム）」を具現化できる。一日一回使用可能。(376話)",
+        "nenBeastImage": null
     },
     "12": {
         "id": 12,
@@ -112,7 +122,8 @@
         "motherId": "21",
         "nenBeastName": "",
         "nenBeastNote": "操作系、半強制型。「おヒマ？」と質問し「ヒマ」と答えると操られる。",
-        "nenBeastImage": "",
+        "nenBeastThumbnailImage": "beast12_thumbnail.jpg",
+        "nenBeastImage": "beast12_jpg.jpg",
         "isDead": true,
         "note": "第7王妃セヴァンチの命令により、警護が第13王子に回された。警護は6人のみ。"
     },
@@ -122,8 +133,9 @@
         "thumbnailImage": "MarayaamAv.jpg",
         "motherId": "21",
         "nenBeastName": "",
-        "nenBeastNote": "王子の部屋ごと別空間に隔離する。別空間から現実世界は一方通行になっている。",
-        "nenBeastImage": ""
+        "nenBeastNote": "王子の部屋ごと別空間に隔離する。別空間から現実世界は一方通行になっている。(375話)",
+        "nenBeastThumbnailImage": "beast13_thumbnail.jpg",
+        "nenBeastImage": "beast13_jpg.jpg"
     },
     "14": {
         "id": 14,
@@ -132,6 +144,6 @@
         "motherId": "22",
         "nenBeastName": "",
         "nenBeastNote": "不明",
-        "nenBeastImage": ""
+        "nenBeastImage": null
     }
 }

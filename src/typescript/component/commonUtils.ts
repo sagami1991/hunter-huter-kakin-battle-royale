@@ -101,10 +101,15 @@ export function getThumbnailImage(fileName: string, className?: string) {
         `</div>`;
 }
 
-export function createModal(content: HTMLElement) {
+export function createModal(content: HTMLElement, basePositionElement: HTMLElement) {
+    const rect = basePositionElement.getBoundingClientRect();
+    const top = rect.top + window.pageYOffset - 100;
+    const left = rect.left + window.pageXOffset - 100;
+    const pageWidth = document.body.scrollWidth;
+    const pageheight = document.body.scrollHeight;
     const modalElement = elementBuilder(`
-    <div class="modal-overlay">
-        <div class="modal-content"></div>
+    <div class="modal-overlay" style="width: ${pageWidth}px; height: ${pageheight}px">
+        <div class="modal-content" style="top: ${top}px; left: ${left}px;"></div>
     </div>`
     );
     modalElement.querySelector(".modal-content")!.appendChild(content);
