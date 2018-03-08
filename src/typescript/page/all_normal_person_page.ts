@@ -15,7 +15,7 @@ export class AllNormalPersonView extends BasePageView {
         return "警護人一覧";
     }
     public getUpdatedAt() {
-        return new Date(2018, 2, 2);
+        return new Date(2018, 2, 8);
     }
 
     private princes!: Map<string, IPrince>;

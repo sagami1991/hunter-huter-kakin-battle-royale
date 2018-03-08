@@ -308,7 +308,7 @@
     "56": {
         "name": "ベレレインテ",
         "belongId": "25",
-        "note": "第13王子マラヤームの部屋は別空間に隔離されているが、ベレレインテのみ外出中。念講習会で、クラピカが暗殺者の疑いをかけられたところを助ける。",
+        "note": "第13王子マラヤームの部屋は別空間に隔離されているが、ベレレインテのみ外出中(375話)。念講習会で、クラピカが暗殺者の疑いをかけられたところを助ける(376話)。",
         "thumbnailImage": "ベレレインテ_thumbnail.jpg",
         "observerPrinceId": "13",
         "isDead": false,
@@ -797,6 +797,17 @@
         "observerPrinceId": "2",
         "isDead": false,
         "useNen": false,
+        "isObserver": false,
+        "isAttendedTraining": false
+    },
+    "101": {
+        "name": "キーニ",
+        "belongId": "25",
+        "note": "王子の部屋に円を張ることができる。第10王子カチョウの部屋に第11王子フウゲツがマジックワームを使って現れたことを知っていた。(377話)",
+        "thumbnailImage": "キーニ.png",
+        "observerPrinceId": "10",
+        "isDead": false,
+        "useNen": true,
         "isObserver": false,
         "isAttendedTraining": false
     }

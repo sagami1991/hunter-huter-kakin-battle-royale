@@ -14,7 +14,7 @@ export class AllPrinceView extends BasePageView {
         return "王子・王妃一覧";
     }
     public getUpdatedAt() {
-        return new Date(2018, 2, 2);
+        return new Date(2018, 2, 8);
     }
 
     public render() {
@@ -64,6 +64,7 @@ export class AllPrinceView extends BasePageView {
                 },
                 { label: "霊獣能力", width: 350, parse: (prince) => prince.nenBeastNote },
                 { label: "固有念能力", width: 350, parse: (prince) => prince.nenNote || "" },
+                { label: "備考", width: 350, parse: (prince) => prince.note || "" },
             ],
         });
 

@@ -6,6 +6,7 @@ export interface IPerson {
     isDead?: boolean;
     isArrested?: boolean;
     isAttendedTraining?: boolean;
+    note?: string;
 }
 export interface IPrince extends IPerson {
     motherId: string;
