@@ -30,8 +30,6 @@ export function addDelegateEventListener(
 function elementSelectorMatches(element: Element, selector: string): boolean {
     if (element.matches) {
         return element.matches(selector);
-    } else if (element.msMatchesSelector) {
-        return element.msMatchesSelector(selector);
     }
     console.warn("matchesメソッドが存在しない");
     return false;
