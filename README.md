@@ -4,3 +4,12 @@
 
 
 ![alt](./Screenshot_214_jpg.jpg)
+
+
+## How to Deploy
+```
+npm install
+npm run webpack-production-win
+npm install -g firebase-tools
+firebase deploy
+```
